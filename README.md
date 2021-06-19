@@ -129,3 +129,4 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Fix high gravity origin trait to allow exactly one of the high/regular/low-G versions at a time
     * Changed usage of `owner_main_species` to `owner_species` (based on [Dev Diary 204](https://forum.paradoxplaza.com/forum/developer-diary/stellaris-dev-diary-204-scripting-language-and-moddability-improvements.1461327/))
     * High-G origin gives +5% happiness on high-G planets, -5% on low-G
+* 2.2.0 Add event to flag the game as having this mod installed (global flag `eldanaer_stellar_authority_installed`)
