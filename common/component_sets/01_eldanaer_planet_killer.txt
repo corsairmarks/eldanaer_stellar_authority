@@ -1,0 +1,5 @@
+component_set = { # Necrophagic Spore Dispersal
+	key = "PLANET_KILLER_SPORE_DISPERSAL"
+	icon = "GFX_ship_part_nanobot_diffuser"
+	icon_frame = 1
+}

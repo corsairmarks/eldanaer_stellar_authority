@@ -1,0 +1,82 @@
+has_eldanaer_prerequisites = {
+	has_necroids = yes # eldanaer: origin, city graphical culture
+	has_plantoids = yes # k'foor: portrait
+	has_lithoids = yes # zdremites: species class
+}
+
+can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		is_a_habitable_planet_megastructure = yes
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			planet_is_hostile = yes
+			AND = {
+				exists = owner
+				owner = { is_country_type = primitive }
+			}
+		}
+	}
+	if = {
+		limit = { exists = owner }
+		# primitive planet must be within borders
+		if = {
+			limit = { owner = { is_country_type = primitive } }
+			custom_tooltip = {
+				fail_text = primitives_not_in_borders
+				exists = space_owner
+				space_owner = { is_same_value = FROM.owner }
+			}
+		}
+		# planets owned by the attacker are targetable if they have any pops that can be necrophaged
+		else_if = {
+			limit = { owner = { is_same_value = FROM.owner } }
+			custom_tooltip = {
+				fail_text = no_necrophagable_pops
+				any_owned_pop = {
+					species = {
+						# same logic as species_can_be_necrophaged (common\scripted_triggers\00_scripted_triggers.txt)
+						# but PREV is replaced with FROM so it can be used in this trigger (FROM is the colossus).
+						NOR = {
+							is_archetype = MACHINE
+							is_archetype = ROBOT
+							is_archetype = PRESAPIENT
+							is_same_species = FROM.owner_species
+						}
+						species_has_happiness_with_owner = FROM.owner
+					}
+				}
+			}
+		}
+		# otherwise at least half the pops must be either the main species of the attacker or necrophagable
+		else = {
+			custom_tooltip = {
+				fail_text = not_enough_necrophagable_pops
+				pop_percentage = {
+					percentage >= 0.5
+					limit = {
+						species = {
+							NOR = {
+								is_archetype = MACHINE
+								is_archetype = ROBOT
+								is_archetype = PRESAPIENT
+								# assumes that species of the same type as the attacker are compelled to revolt - so they count towards the minimum
+							}
+							species_has_happiness_with_owner = FROM.owner
+						}
+					}
+				}
+			}
+		}
+	}
+}

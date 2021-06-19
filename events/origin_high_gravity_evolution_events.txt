@@ -1,0 +1,150 @@
+namespace = origin_high_gravity_evolution
+
+# High Gravity Evolution Trait (triggered by on_pop_added)
+pop_event = {
+	id = origin_high_gravity_evolution.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			AND = {
+				FROM = { has_modifier = low_gravity }
+				NOT = { has_trait = trait_high_gravity_evolution_3 }
+				OR = {
+					has_trait = trait_high_gravity_evolution_1
+					has_trait = trait_high_gravity_evolution_2
+				}
+			}
+			AND = {
+				FROM = { has_modifier = high_gravity }
+				NOT = { has_trait = trait_high_gravity_evolution_1 }
+				OR = {
+					has_trait = trait_high_gravity_evolution_2
+					has_trait = trait_high_gravity_evolution_3
+				}
+			}
+			AND = {
+				FROM = {
+					NOR = {
+						has_modifier = low_gravity
+						has_modifier = high_gravity
+					}
+				}
+				NOT = { has_trait = trait_high_gravity_evolution_2 }
+				OR = {
+					has_trait = trait_high_gravity_evolution_1
+					has_trait = trait_high_gravity_evolution_3
+				}
+			}
+		}
+	}
+	immediate = {
+		save_event_target_as = high_g_species
+		# modification is done individually for each add/remove condition because adding/removing traits that don't exist breaks things a little
+		if = {
+			limit = {
+				has_trait = trait_high_gravity_evolution_1
+				FROM = { NOT = { has_modifier = high_gravity } }
+			}
+			modify_species = {
+				species = event_target:high_g_species
+				remove_trait = trait_high_gravity_evolution_1
+				effect = {
+					save_event_target_as = high_g_species
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_trait = trait_high_gravity_evolution_2
+				FROM = {
+					OR = {
+						has_modifier = low_gravity
+						has_modifier = high_gravity
+					}
+				}
+			}
+			modify_species = {
+				species = event_target:high_g_species
+				remove_trait = trait_high_gravity_evolution_2
+				effect = {
+					save_event_target_as = high_g_species
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_trait = trait_high_gravity_evolution_3
+				FROM = { NOT = { has_modifier = low_gravity } }
+			}
+			modify_species = {
+				species = event_target:high_g_species
+				remove_trait = trait_high_gravity_evolution_3
+				effect = {
+					save_event_target_as = high_g_species
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_trait = trait_high_gravity_evolution_1 }
+				FROM = { has_modifier = high_gravity }
+			}
+			modify_species = {
+				species = event_target:high_g_species
+				add_trait = trait_high_gravity_evolution_1
+				effect = {
+					save_event_target_as = high_g_species
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_trait = trait_high_gravity_evolution_2 }
+				FROM = {
+					NOR = {
+						has_modifier = low_gravity
+						has_modifier = high_gravity
+					}
+				}
+			}
+			modify_species = {
+				species = event_target:high_g_species
+				add_trait = trait_high_gravity_evolution_2
+				effect = {
+					save_event_target_as = high_g_species
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_trait = trait_high_gravity_evolution_3 }
+				FROM = { has_modifier = low_gravity }
+			}
+			modify_species = {
+				species = event_target:high_g_species
+				add_trait = trait_high_gravity_evolution_3
+				effect = {
+					save_event_target_as = high_g_species
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = origin_high_gravity_evolution.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_origin = origin_high_gravity_evolution
+	}
+	immediate = {
+		capital_scope = {
+			add_modifier = {
+				modifier = "high_gravity"
+				days = -1
+			}
+		}
+	}
+}

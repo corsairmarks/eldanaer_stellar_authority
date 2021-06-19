@@ -1,0 +1,16 @@
+# This file is 000 in order to load before the default messages file, because most of the complex origins (such as Necrophage,
+# which is the scripted origin for the Eldanær Stellar Authority) do not respect the custom_start_screen flag.  The only way
+# for this to fire is for it to be evaluated before the Necrophage start screen.
+
+# Eldanær Stellar Authority
+part = {
+	location = 0
+	localization = "START_SCREEN_ELDANAER_STELLAR_AUTHORITY"
+	trigger = {
+		has_country_flag = custom_start_screen
+		has_country_flag = is_eldanaer_stellar_authority
+		has_origin = origin_necrophage
+		has_valid_civic = civic_byzantine_bureaucracy
+		has_valid_civic = civic_police_state
+	}
+}

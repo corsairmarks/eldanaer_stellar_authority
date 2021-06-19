@@ -1,0 +1,15 @@
+# THIS = country
+on_game_start_country = {
+	events = {
+		origin_high_gravity_evolution.2
+	}
+}
+
+# A pop has been added to the planet
+# ROOT = pop
+# FROM = planet
+on_pop_added = {
+	events = {
+		origin_high_gravity_evolution.1
+	}
+}

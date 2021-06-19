@@ -1,0 +1,51 @@
+on_game_start = {
+	events = {
+		eldanaer.3
+	}
+}
+
+# THIS = country
+on_game_start_country = {
+	events = {
+		eldanaer.1
+		eldanaer.2
+		eldanaer.10 # force the AI player to use predetermined citizenship for the k'foori
+	}
+}
+
+# A leader leveled up.
+# THIS = Country
+# FROM = Leader
+on_leader_level_up = {
+	events = {
+		eldanaer.30
+		eldanaer.31
+	}
+}
+
+# THIS/ROOT = planet that have been fired upon
+# FROM = fleet that fired
+on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
+	events = {
+		crisis.5015 # Menace Objective - Destroy World/Empire
+		eldanaer.500
+	}
+}
+
+# THIS = country
+on_decade_pulse_country = {
+	events = {
+		# force the AI player to use predetermined citizenship for the k'foori and zdremites
+		eldanaer.10
+		eldanaer.20
+	}
+}
+
+# FROM = Country scope (new owner)
+# THIS = Planet scope
+on_planet_transfer = {
+	events = {
+		# force the AI player to use predetermined citizenship for the zdremites (this will fire whether conquered or acquired by necroids.6)
+		eldanaer.21
+	}
+}

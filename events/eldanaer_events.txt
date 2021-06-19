@@ -1,0 +1,936 @@
+namespace = eldanaer
+
+# Based on necroids.4 from events\necroids_events_1.txt, the purpose of this event is to replace the random primitives
+# with custom primitives for the Eldanaer Stellar Authority.  Currently only the T1 colony is a custom species.
+country_event = {
+	id = eldanaer.1
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_country_flag = is_eldanaer_stellar_authority
+		has_origin = origin_necrophage
+	}
+	immediate = {
+		# Find the randomized necroids.4 primitives and replace with prescripted primitives.
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = { has_star_flag = neighbor_t1_first_colony }
+				max_steps = 3
+				random_system_planet = {
+					limit = {
+						has_planet_flag = prescripted_ideal
+						OR = {
+							is_colonizable = yes
+							AND = {
+								is_colony = yes
+								exists = owner
+								owner = { is_primitive = yes }
+							}
+						}
+					}
+					prevent_anomaly = yes
+					if = {
+						limit = { is_colony = yes }
+						destroy_colony = yes
+					}
+					clear_planet_modifiers = yes
+					add_modifier = {
+						modifier = "dangerous_wildlife"
+						days = -1
+					}
+					set_planet_flag = zdremite_homeworld@ROOT
+					create_species = {
+						name = "PRESCRIPTED_species_name_zdremite"
+						plural = "PRESCRIPTED_species_plural_zdremite"
+						adjective = "PRESCRIPTED_species_adjective_zdremite"
+						# species_bio does not currently accept localisation keys or literal newlines
+						# species_bio = "PRESCRIPTED_species_bio_zdremite"
+						namelist = "LITHOID3"
+						class = "LITHOID"
+						portrait = "lith8"
+						homeworld = THIS
+						traits = {
+							trait = "trait_lithoid"
+							trait = "trait_very_strong"
+							trait = "trait_resilient"
+							trait = "trait_slow_learners"
+							trait = "trait_sedentary"
+							trait = "trait_pc_tropical_preference"
+							trait = "trait_high_gravity_evolution_1"
+						}
+					}
+					last_created_species = {
+						# force the use of lith8 - if another random species was already using it, the zdremites
+						# will end up with "none" which displays as blank or the last selected species.
+						change_species_portrait = "lith8"
+						set_species_flag = zdremite_species@ROOT
+						# flags from "Battle Thralls can be Military Leaders" to allow the Zdremites to be leaders
+						set_species_flag = allow_military_leaders_for_xenophobe
+						set_species_flag = allow_military_leaders_for_necrophage
+					}
+					create_country = {
+						name = "PRESCRIPTED_zdremite"
+						authority = auth_oligarchic
+						civics = {
+							civic = civic_landed_nobility
+							civic = civic_flat_world_theory
+						}
+						species = last_created_species
+						ethos = {
+							ethic = "ethic_authoritarian"
+							ethic = "ethic_militarist"
+							ethic = "ethic_materialist"
+						}
+						flag = {
+							icon = {
+								category = "special"
+								file = "primitive.dds"
+							}
+							background = {
+								category = "backgrounds"
+								file = "new_dawn.dds"
+							}
+							colors = {
+								"orange"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						origin = "origin_high_gravity_evolution"
+						type = primitive
+					}
+					last_created_country = {
+						country_event = { id = origin_high_gravity_evolution.2 }
+						set_graphical_culture = preindustrial_01
+						set_country_flag = steam_age
+						set_primitive_age = steam_age
+						set_adjective = "PRESCRIPTED_adjective_zdremite"
+						# Don't allow the Zdremites to advance quickly - this flag is used by the
+						# primitive age increment events in events\primitive_events.txt to gatekeep
+						# advancement (although most of them use 2160 days/6 years).
+						set_timed_country_flag = {
+							flag = recently_advanced
+							years = 25
+						}
+					}
+					setup_primitive_planet = yes
+					# Add hibernating Zdremites blockers, but kill off an equal number of the primitive pops to compensate.
+					while = {
+						count = 4
+						add_deposit = d_hibernating_zdremites
+						# Purge fallbacks - clean up highest-ranking unemployed pops first, then move down strata ending with random workers
+						if = {
+							limit = { any_owned_pop = { is_pop_category = specialist is_unemployed = yes } }
+							random_owned_pop = {
+								limit = { is_pop_category = specialist is_unemployed = yes }
+								kill_pop = yes
+							}
+						}
+						else_if = {
+							limit = { any_owned_pop = { is_pop_category = worker is_unemployed = yes } }
+							random_owned_pop = {
+								limit = { is_pop_category = worker is_unemployed = yes }
+								kill_pop = yes
+							}
+						}
+						else_if = {
+							limit = { any_owned_pop = { is_pop_category = worker } }
+							random_owned_pop = {
+								limit = { is_pop_category = worker }
+								kill_pop = yes
+							}
+						}
+					}
+					check_planet_employment = yes
+					# Make any random blockers have a more dangerous flavor.
+					while = {
+						limit = { has_deposit = d_mountain_range }
+						remove_deposit = d_mountain_range
+						random_list = {
+							50 = { add_deposit = d_active_volcano }
+							50 = { add_deposit = d_dangerous_wildlife_blocker }
+						}
+					}
+					set_name = "PRESCRIPTED_planet_name_zdremite"
+					change_colony_foundation_date = -461 # this number matches necroids.4
+				}
+			}
+			# closest_system = {
+			#	limit = { has_star_flag = neighbor_t2_second_colony }
+			#	max_steps = 6
+			#	random_system_planet = {
+			#		limit = {
+			#			is_colonizable = yes
+			#			is_colony = no
+			#			has_planet_flag = prescripted_ideal
+			#		}
+			#		generate_early_primitives_on_planet = yes
+			#		set_name = random
+			#		change_colony_foundation_date = -1275
+			#	}
+			#	last_created_country = {
+			#		if = {
+			#			limit = {
+			#				is_country_type = primitive
+			#			}
+			#			randomise_early_primitive_age_effect = yes
+			#		}
+			#	}
+			# }
+		}
+	}
+}
+
+# additional custom setup for the ESA
+country_event = {
+	id = eldanaer.2
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		has_country_flag = is_eldanaer_stellar_authority
+		has_origin = origin_necrophage
+	}
+	immediate = {
+		# Set the K'foori to decently-treated chattel slaves
+		random_owned_species = {
+			limit = { has_species_flag = syncretic_species@ROOT }
+			log = "eldanaer.1 matched k'foori for the [Root.GetRealName]: setting chattel slavery and decent conditions"
+			set_citizenship_type = {
+				country = ROOT
+				type = citizenship_slavery
+				cooldown = no
+			}
+			set_slavery_type = {
+				country = ROOT
+				type = slavery_normal
+				cooldown = no
+			}
+			set_living_standard = {
+				country = ROOT
+				type = living_standard_normal
+				cooldown = no
+			}
+		}
+		# Set initial open borders
+		set_policy = {
+			policy = border_policy
+			option = border_policy_open
+			cooldown = no
+		}
+		capital_scope.sector = {
+			# set_name = "START_esa_sector_name"
+			# flag the initial governor for custom level-ups, set to bureaucrat
+			leader = {
+				set_name = "START_esa_initial_governor_name"
+				set_leader_flag = eldanaer_stellar_authority_initial_governor
+				if = {
+					limit = { ROOT = { has_valid_civic = civic_byzantine_bureaucracy } }
+					if = {
+						limit = { NOT = { has_trait = leader_trait_bureaucrat } }
+						remove_generic_randomized_positive_traits = yes
+						remove_governor_randomized_positive_traits = yes
+						add_trait = leader_trait_bureaucrat
+					}
+					set_leader_flag = has_gained_level_trait # pretend like this leader gained a level-up trait - it's actually scripted in eldanaer.30
+				}
+			}
+		}
+		ruler = {
+			set_leader_flag = eldanaer_stellar_authority_initial_ruler
+			set_leader_flag = has_gained_level_trait # pretend like this leader gained a level-up trait - it's actually scripted in eldanaer.31
+		}
+	}
+}
+
+# additional setup for the eldanaer_starting_system_initializer
+event = {
+	id = eldanaer.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_system = {
+			limit = { has_star_flag = raen_system }
+			every_system_planet = {
+				limit = { has_planet_flag = empire_home_planet }
+				if = {
+					limit = {
+						NOR = {
+							has_planet_modifier = pm_lush
+							has_modifier = lush_planet
+						}
+						OR = {
+							is_wet = yes
+							is_planet_class = pc_gaia
+						}
+					}
+					add_modifier = {
+						modifier = lush_planet
+						days = -1
+					}
+				}
+				if = {
+					limit = {
+						exists = orbit
+						orbit = { is_planet_class = pc_gas_giant }
+						NOR = {
+							has_planet_modifier = pm_extensive_moon_system
+							has_modifier = extensive_moon_system
+						}
+					}
+					orbit = {
+						add_modifier = {
+							modifier = extensive_moon_system
+							days = -1
+						}
+						apply_extensive_moon_system_child_modifier_planet = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eldanaer.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = yes
+		has_country_flag = is_eldanaer_stellar_authority
+		has_origin = origin_necrophage
+	}
+	immediate = {
+		# Set the K'foori to decently-treated chattel slaves
+		every_owned_pop_species = {
+			limit = { has_species_flag = syncretic_species@ROOT }
+			log = "eldanaer.10 matched k'foori for the [Root.GetRealName]: forcing chattel slavery and a living standard above subsistence"
+			set_citizenship_type = {
+				country = ROOT
+				type = citizenship_slavery
+				cooldown = yes
+			}
+			set_slavery_type = {
+				country = ROOT
+				type = slavery_normal
+				cooldown = yes
+			}
+			if = {
+				limit = {
+					has_living_standard = {
+						country = ROOT
+						type = living_standard_subsistence
+					}
+				}
+				set_living_standard = {
+					country = ROOT
+					type = living_standard_normal
+					cooldown = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eldanaer.20
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_ai = yes
+		has_country_flag = is_eldanaer_stellar_authority
+		has_origin = origin_necrophage
+	}
+	immediate = {
+		# Set the Zdremites to well-treated battle thralls
+		every_owned_pop_species = {
+			limit = { has_species_flag = zdremite_species@ROOT }
+			log = "eldanaer.20 matched zdremites for the [Root.GetRealName]: forcing battle thralldom and social welfare standard of living"
+			set_citizenship_type = {
+				country = ROOT
+				type = citizenship_slavery
+				cooldown = yes
+			}
+			set_slavery_type = {
+				country = ROOT
+				type = slavery_military
+				cooldown = yes
+			}
+			set_military_service_type = {
+				country = ROOT
+				type = military_service_limited
+				cooldown = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_living_standard = {
+							country = ROOT
+							type = living_standard_subsistence
+						}
+						has_living_standard = {
+							country = ROOT
+							type = living_standard_normal
+						}
+						has_living_standard = {
+							country = ROOT
+							type = living_standard_stratified
+						}
+						has_living_standard = {
+							country = ROOT
+							type = living_standard_academic_privilege
+						}
+					}
+				}
+				set_living_standard = {
+					country = ROOT
+					type = living_standard_good
+					cooldown = yes
+				}
+			}
+		}
+	}
+}
+
+# Triggered by on_planet_transfer, ideally after necroids.6
+# FROM = Country scope (new owner)
+# THIS = Planet scope
+planet_event = {
+	id = eldanaer.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = FROM
+		has_planet_flag = zdremite_homeworld@FROM
+		FROM = {
+			is_ai = yes
+			has_country_flag = is_eldanaer_stellar_authority
+			has_origin = origin_necrophage
+		}
+	}
+	immediate = {
+		log = "planet transfer: [This.GetName] now owned by the [This.Owner.GetName]"
+		FROM = { country_event = { id = eldanaer.20 } }
+	}
+}
+
+# Triggered by on_leader_level_up
+# ROOT = Country
+# FROM = Leader
+country_event = {
+	id = eldanaer.30
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = is_eldanaer_stellar_authority
+		FROM = {
+			has_leader_flag = eldanaer_stellar_authority_initial_governor
+			num_traits < 3
+		}
+	}
+	immediate = {
+		FROM = {
+			if = {
+				limit = {
+					ROOT = { allows_slavery = yes }
+					has_level > 1
+					NOT = { has_trait = leader_trait_iron_fist }
+				}
+				add_trait = leader_trait_iron_fist
+				set_timed_leader_flag = { flag = gained_leader_trait_iron_fist days = 7 }
+				set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+				owner = { country_event = { id = leader.23 } } # notification to player
+			}
+			else_if = {
+				limit = {
+					ROOT = { has_valid_civic = civic_police_state }
+					has_level > 4
+					NOT = { has_trait = leader_trait_righteous }
+				}
+				add_trait = leader_trait_righteous
+				set_timed_leader_flag = { flag = gained_leader_trait_righteous days = 7 }
+				set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+				owner = { country_event = { id = leader.23 } } # notification to player
+			}
+		}
+	}
+}
+
+# Triggered by on_leader_level_up
+# ROOT = Country
+# FROM = Leader
+country_event = {
+	id = eldanaer.31
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = is_eldanaer_stellar_authority
+		FROM = {
+			has_leader_flag = eldanaer_stellar_authority_initial_ruler
+			num_traits < 3
+		}
+	}
+	immediate = {
+		FROM = {
+			if = {
+				limit = {
+					has_level > 2
+					NOT = { has_trait = trait_ruler_deep_connections }
+				}
+				add_trait = trait_ruler_deep_connections
+				set_timed_leader_flag = { flag = gained_trait_ruler_deep_connections days = 7 }
+				set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+				owner = { country_event = { id = leader.25 } } # notification to player
+			}
+		}
+	}
+}
+
+# Necrophagic Spore Dispersal: based on planet_destruction.500 (Nanobot Assimilation) in events\planet_destruction_events.txt,
+# but uses criteria for conversion based on necroids.1 (Consumption for Necrophage) in events\necroids_events_1.txt and the trigger
+# species_can_be_necrophaged from common\scripted_triggers\00_scripted_triggers.txt.
+planet_event = {
+	id = eldanaer.500
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		owner = { save_event_target_as = former_owner }
+		FROM.owner = { country_event = { id = eldanaer.501 } }
+		if = {
+			limit = {
+				OR = {
+					is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+				}
+			}
+			FROM.owner = {
+				# This flag isn't changed so that it isn't necessary to override resolution_rulesofwar_independent_tribunals;
+				# necrophage conversion is close enough in concept to nanobots that this mostly makes sense.
+				set_timed_country_flag = {
+					flag = resolution_breached_fired_assimilator
+					days = 3600
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = FROM.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			add_threat = { who = FROM.owner amount = 3 }
+			# modifier for allies + those upset by genocide
+			every_country = {
+				limit = {
+					NOR = {
+						is_same_value = FROM.owner
+						is_same_value = ROOT.owner
+						has_origin = origin_necrophage
+						AND = {
+							has_federation = yes
+							is_in_federation_with = FROM.owner
+						}
+					}
+					OR = {
+						has_communications = FROM.owner
+						has_communications = ROOT.owner
+					}
+					OR = {
+						AND = {
+							has_federation = yes
+							is_in_federation_with = ROOT.owner
+						}
+						has_ai_personality = awakened_fallen_empire_xenophile
+						AND = {
+							is_country_type = default
+							OR = {
+								is_egalitarian = yes
+								is_xenophile = yes
+								is_spiritualist = yes
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_necrophaged_a_world
+					who = FROM.owner
+				}
+			}
+			# modifiers for victim
+			owner = {
+				add_opinion_modifier = {
+					modifier = opinion_necrophaged_my_world
+					who = FROM.owner
+				}
+				if = {
+					limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+					add_modifier = {
+						modifier = colossus_victim
+						days = 10800 # 30 years
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = primitive }
+			}
+			# modifier for those upset by genocide of primitives
+			every_country = {
+				limit = {
+					NOR = {
+						is_same_value = FROM.owner
+						has_origin = origin_necrophage
+					}
+					OR = {
+						has_communications = FROM.owner
+						has_communications = ROOT.owner
+					}
+					is_country_type = default
+					NOR = {
+						is_xenophobe = yes
+						is_homicidal = yes
+						is_xenophile = yes
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_necrophaged_a_primitive_world
+					who = FROM.owner
+				}
+			}
+			every_country = {
+				limit = {
+					NOR = {
+						is_same_value = FROM.owner
+						has_origin = origin_necrophage
+					}
+					OR = {
+						has_communications = FROM.owner
+						has_communications = ROOT.owner
+					}
+					OR = {
+						has_ai_personality = awakened_fallen_empire_xenophile
+						AND = {
+							is_country_type = default
+							is_xenophile = yes
+						}
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_necrophaged_a_primitive_world_phile
+					who = FROM.owner
+				}
+			}
+		}
+		# Add war exhaustion to planet owner
+		owner = {
+			if = {
+				limit = { # isn't the case when the crisis bombards planets, for instance
+					is_at_war_with = FROM.fleet.owner
+				}
+				add_static_war_exhaustion = {
+					attacker = FROM.fleet.owner
+					location = ROOT
+					value_for_planet_destruction = 1.0
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = { exists = owner }
+					owner = { NOT = { is_same_value = FROM.owner } }
+				}
+			}
+			set_owner = FROM.owner
+		}
+		every_owned_pop = {
+			limit = { species = { species_can_be_necrophaged = yes } }
+			# This section copies necrophage logic from necroids.1 (from events\necroids_events_1.txt), but doesn't look
+			# for any existing necrophage pops on the planet to duplicate.  The opinion penalties here are in addition to
+			# the above penalties for wholesale necrophaging a world - empires REALLY HATE getting necrophaged.
+			ROOT.owner = {
+				if = {
+					limit = { has_ascension_perk = ap_become_the_crisis }
+					complete_crisis_objective = crisobj_purge_pops
+				}
+			}
+			ROOT = {
+				create_pop = {
+					species = owner_species
+				}
+				if = {
+					limit = {
+						last_created_pop = { NOT = { ideal_planet_class = ROOT } }
+						NOR = {
+							uses_district_set = habitat
+							uses_district_set = ring_world
+							uses_district_set = city_world
+							uses_district_set = hive_world
+							uses_district_set = machine_world
+							is_planet_class = pc_gaia
+							is_planet_class = pc_relic
+						}
+						owner = {
+							has_technology = tech_glandular_acclimation
+							NOT = { ideal_planet_class = ROOT }
+						}
+					}
+					last_created_pop = {
+						modify_species = {
+							ideal_planet_class = ROOT
+						}
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_communications = ROOT.owner
+					NOT = { is_country = ROOT.owner }
+					NOT = { is_same_species = prev }
+					NOT = { has_ai_personality_behaviour = purger }
+					NOT = { has_origin = origin_necrophage }
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+					NOR = {
+						has_valid_civic = civic_death_cult
+						has_valid_civic = civic_death_cult_corporate
+					}
+					OR = {
+						is_country_type = default
+						has_ai_personality = awakened_fallen_empire_xenophile
+					}
+					has_intel_level = {
+						who = FROM
+						category = economy
+						level >= 2
+					}
+				}
+				add_opinion_modifier = { who = ROOT.owner modifier = opinion_necrophage }
+			}
+			every_country = {
+				limit = {
+					has_communications = ROOT.owner
+					NOT = { is_country = ROOT.owner }
+					is_same_species = prev
+					has_intel_level = {
+						who = FROM
+						category = economy
+						level >= 1 # lower because you'd hear from a friend of a friend
+					}
+				}
+				add_opinion_modifier = { who = ROOT.owner modifier = opinion_necrophage_our_species }
+			}
+			kill_pop = yes
+		}
+		if = {
+			limit = { owner = { has_swapped_tradition = tr_harmony_unity_of_self } }
+			owner = {
+				add_monthly_resource_mult = {
+					resource = unity
+					value = 1.5
+					min = 5
+					max = 100
+				}
+			}
+		}
+		# if the planet changed ownership...
+		if = {
+			limit = { owner = { NOT = { is_same_value = event_target:former_owner } } }
+			# if it was originally our colony, our species pops are happy to be liberated
+			if = {
+				limit = { is_original_owner = owner }
+				if = {
+					limit = { NOT = { has_modifier = pop_liberation_fever } }
+					add_modifier = {
+						modifier = pop_liberation_fever
+						years = 10
+					}
+				}
+				every_owned_pop = {
+					limit = { species = { is_same_species = owner_species } }
+					remove_modifier = pop_recently_conquered
+					add_modifier = {
+						modifier = pop_liberation_fever
+						years = 10
+					}
+				}
+			}
+			# if we allow sapient synthetics, then conquered robots might be happy or sad about being conquered
+			if = {
+				limit = {
+					any_owned_pop = { species = { is_archetype = ROBOT } }
+					owner = {
+						has_technology = tech_synthetic_workers
+						OR = {
+							has_policy_flag = ai_full_rights
+							has_policy_flag = ai_servitude
+						}
+					}
+				}
+				# if they were ours originally or gained sapience, then they are happy to be liberated
+				if = {
+					limit = {
+						OR = {
+							is_original_owner = owner
+							event_target:former_owner = { NOT = { has_technology = tech_synthetic_workers } }
+						}
+					}
+					every_owned_pop = {
+						limit = { species = { is_archetype = ROBOT } }
+						remove_modifier = pop_recently_conquered
+						add_modifier = {
+							modifier = pop_liberation_fever
+							years = 10
+						}
+					}
+				}
+				# otherwise they originally weren't ours and are sapient...
+				else = {
+					# if they got more rights, then they are happy to be liberated
+					if = {
+						limit = {
+							OR = {
+								event_target:former_owner = { has_policy_flag = ai_outlawed }
+								AND = {
+									event_target:former_owner = { has_policy_flag = ai_servitude }
+									owner = { has_policy_flag = ai_full_rights }
+								}
+							}
+						}
+						every_owned_pop = {
+							limit = { species = { is_archetype = ROBOT } }
+							remove_modifier = pop_recently_conquered
+							add_modifier = {
+								modifier = pop_liberation_fever
+								years = 10
+							}
+						}
+					}
+					# otherwise, their rights stayed the same or were reduced, so they are sad to be conquered
+					else = {
+						every_owned_pop = {
+							limit = { species = { is_archetype = ROBOT } }
+							remove_modifier = pop_liberation_fever
+							add_modifier = {
+								modifier = pop_recently_conquered
+								years = 10
+							}
+						}
+						if = {
+							limit = {
+								pop_percentage = {
+									percentage > 0.4
+									limit = { species = { is_archetype = ROBOT } }
+								}
+							}
+							add_planet_devastation = 25
+						 }
+						 else_if = {
+							limit = {
+								pop_percentage = {
+									percentage > 0.3
+									limit = { species = { is_archetype = ROBOT } }
+								}
+							}
+							add_planet_devastation = 20
+						 }
+						 else_if = {
+							limit = {
+								pop_percentage = {
+									percentage > 0.2
+									limit = { species = { is_archetype = ROBOT } }
+								}
+							}
+							add_planet_devastation = 15
+						 }
+						 else_if = {
+							limit = {
+								pop_percentage = {
+									percentage > 0.1
+									limit = { species = { is_archetype = ROBOT } }
+								}
+							}
+							add_planet_devastation = 10
+						 }
+						 else_if = {
+							limit = {
+								pop_percentage = {
+									percentage > 0.0
+									limit = { species = { is_archetype = ROBOT } }
+								}
+							}
+							add_planet_devastation = 5
+						 }
+					}
+				}
+			}
+		}
+		# Special graphics for Habitats and Ring Worlds
+		if = {
+			limit = { is_planet_class = pc_habitat }
+			spawn_habitat_nanobot_effect = yes
+		}
+		else_if = {
+			limit = { is_planet_class = pc_ringworld_habitable }
+			spawn_ringworld_nanobot_effect = yes
+		}
+		# Changing the planet class to itself causes a graphical sweep effect
+		else = {
+			switch = {
+				trigger = is_planet_class
+				pc_desert = { change_pc = pc_desert }
+				pc_arid = { change_pc = pc_arid }
+				pc_savannah = { change_pc = pc_savannah }
+				pc_ocean = { change_pc = pc_ocean }
+				pc_continental = { change_pc = pc_continental }
+				pc_tropical = { change_pc = pc_tropical }
+				pc_tundra = { change_pc = pc_tundra }
+				pc_arctic = { change_pc = pc_arctic }
+				pc_alpine = { change_pc = pc_alpine }
+				pc_gaia = { change_pc = pc_gaia }
+				pc_nuked = { change_pc = pc_nuked }
+				pc_relic = { change_pc = pc_relic }
+				pc_city = { change_pc = pc_city }
+			}
+		}
+	}
+}
+
+# FROM is the planet
+# FROM.FROM is the colossus
+country_event = {
+	id = eldanaer.501
+	title = eldanaer.501.name
+	desc = eldanaer.501.desc
+	picture = GFX_evt_genetic_modification
+	show_sound = event_mystic_reveal
+	location = FROM
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = fired_spores }
+		FROM = {
+			NOR = {
+				is_planet_class = pc_habitat
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+	}
+	immediate = {
+		set_country_flag = fired_spores
+	}
+	option = {
+		name = OK
+		FROM = {
+			custom_tooltip = eldanaer.501.tooltip
+		}
+	}
+}

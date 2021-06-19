@@ -1,0 +1,33 @@
+# Bureaucratic Autocracy
+gov_bureaucratic_autocracy = {
+	ruler_title = RT_BA_AUTARCH
+	ruler_title_female = RT_BA_AUTARCH_FEMALE
+	heir_title = RT_BA_COADJUTANT
+	heir_title_female = RT_BA_COADJUTANT_FEMALE
+	use_regnal_names = yes
+	dynastic_last_names = no # strict transference of power, but not hereditary
+	should_force_rename = yes
+	possible = {
+		has_authority = auth_imperial
+		has_valid_civic = civic_byzantine_bureaucracy
+		NOR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+	weight = {
+		base = 1
+		modifier = {
+			has_country_flag = is_eldanaer_stellar_authority
+			add = 500
+		}
+		modifier = {
+			has_ethic = ethic_authoritarian
+			factor = 2
+		}
+		modifier = {
+			has_ethic = ethic_fanatic_authoritarian
+			factor = 4
+		}
+	}
+}

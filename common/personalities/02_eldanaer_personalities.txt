@@ -1,0 +1,69 @@
+cautious_autocrats = {
+	aggressiveness = 0.6
+	trade_willingness = 1.0
+	bravery = 0.75
+	combat_bravery = 1.1
+
+	military_spending = 1.0
+	colony_spending = 1.25
+
+	federation_acceptance = 0
+	nap_acceptance = -10
+	commercial_pact_acceptance = 30
+	research_agreement_acceptance = 15
+	defensive_pact_acceptance = -30
+	migration_pact_acceptance = -20
+
+	advanced_start_chance = 10
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.6
+	shields_ratio = 0.3
+	hull_ratio = 0.1
+
+	threat_modifier = 1.1
+	threat_others_modifier = 1.0
+	friction_modifier = 0.5
+	claims_modifier = 2.0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = yes
+		uplifter = yes
+		purger = no
+		displacer = no
+		dominator = yes
+		infiltrator = yes
+		robot_exploiter = no
+		robot_liberator = yes
+		propagator = no
+		multispecies = yes
+		isolationist = no
+		crisis_fighter = yes
+		wants_tribute = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_country_flag = is_eldanaer_stellar_authority
+		OR = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		OR = {
+			has_ethic = ethic_authoritarian
+			has_ethic = ethic_fanatic_authoritarian
+		}
+	}
+
+	weight_modifier = {
+		weight = 0
+		modifier = {
+			weight = 1000
+			has_country_flag = is_eldanaer_stellar_authority
+		}
+	}
+}

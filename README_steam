@@ -1,0 +1,56 @@
+[h1]Overview[/h1]
+
+Do you like to play or fight empires with a backstory? Or maybe you want to have a pre-made empire to bring to your next role-play game? Then this mod is for you! I enjoyed coming up with a backstory for this empire, and I thought that I'd publish it for others to enjoy as well.
+
+The Eldanær Stellar Authority is a fanatic authoritarian, xenophobic empire ruled by a rigid and complex bureaucratic hierarchy. It has a custom imperial authority, the Bureaucratic Autocracy, which is the same as a regular imperial authority but the rulers do not use dynastic titles. The Eldanær are fungoid necrophages with a plantoid prepatent species, the K'foori. This mod also includes a custom primitive species of lithoids (the Zdremites) that will replace one of the randomly generated primitives for the necrophage origin - as long as the number of guaranteed habitable worlds is 1 or higher. The Eldanær have a pre-scripted home system (Ræl) with named planets and the Lush modifier on their homeworld (Dærun), orbiting a ringed gas giant with an extensive moon system. The Zdremites are guaranteed to spawn on a high gravity world and dangerous wildlife with lithoid monoliths that can always be cleared into extra Zdremite Pops, but have fewer Pops to start with.
+
+Finally, I added a reimagined colossus weapon: the Necrophagic Spore Diffuser. This weapon can become available for fungoid necrophage empires to research [i]after[/i] they have completed the Colossus project. It is based on the Nanobot Diffuser (and reuses the same graphical effects). The weapon effects are slightly different: all biological Pops are converted to the main necrophage species of the firing empire (normally the Eldanær but the weapon can be researched by any fungoid necrophage) and robot Pops are "conquered" by the necrophaged Pops, which causes devastation based on the percentage of robot Pops that were present. Because the weapon cannot forcibly convert robot Pops, it can only be fired on hostile planets that have more than half of the Pops eligible to be necrophaged (or are already the appropriate necrophage species). Similar to the Divine Enforcer, it can be used on your own planets to instantly convert any biological Pops into your necrophage fungoids (this does not cause devastation or unhappiness in robotic Pops - they are already in your empire).
+
+[h2]Gameplay Notes[/h2]
+
+The Eldanær consider themselves to have culturally transcended their biological drive to necrophage others indiscriminately. Generally, avoid using the Necrophage Purge type unless you develop a particularly hated enemy. They prefer to establish trading partners and maintain commercial pacts, but keep their partners at arm's length. Although "protecting" the secret of their origin fuels their paranoid xenophobia, they don't implicitly hate other species. Open Borders are preferred.
+
+The Stellar Authority is a complex and impenetrable bureaucracy with many overlapping (and sometimes contradictory) layers, so Stratified Economy is preferred for any free Pops. Because the Eldanær consider themselves civilized, they tend to grant Residency to any species in their empire that originated in another space-faring empire and came peacefully (although they generally avoid migration treaties) as well as synthetics. On the other hand, they consider themselves superior to less technologically-advanced societies and view it as no contradition to conquer and enslave primitive species or uplifted species. The slavery type should fit the species traits - living standards can vary, but giving the K'foori and Zdremites Social Welfare or Decent Conditions is preferred.
+
+When selecting a third civic, consider Corvée System to support their many-tiered, authoritarian society, or Merchant Guilds (and the Mercantile diplomatic stance) to lean into their trade ambitions.
+
+Ascending along the biological path (Engineered Evolution, Evolutionary Mastery) is preferred because Synthetic Evolution disables the necrophage mechanics. They prefer to swap Enduring for Venerable and acquiring Robust as traits - this leans hard into their role-play as incredibly long-lived. Thrifty is a good choice to replace Traditional if you lean into Merchant Guilds.
+
+Finally, try to build a Deep Space Black Site in a starbase in every system with inhabited planets, habitats, etc. The ESA is a rigid, authoritarian state after all. I was originally inspired to create some sort of totalitarian empire based on the species image from the Living State technology (unlocks Deep Space Black Site), which is why the Eldanær have the same portrait.
+
+[h2]Species Design[/h2]
+
+The species bios are not visible in-game other than the main empire-level description available on the empire selection screen. This is because the game cannot load localised text for [i]species_bio[/i] in either prescripted races or the [i]create_species[/i] effect, and also does not support escaped newline characters [i]\n[/i]. This is reported as a bug [url=https://forum.paradoxplaza.com/forum/threads/stellaris-v3-0-2-91c1-species_bio-for-prescripted-countries-or-for-the-create_species-effect-does-not-resolve-localisation-text-and-instead-show.1471611/]here[/url].
+
+For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].
+
+[h2]Custom Scripting[/h2]
+
+There is a new diplomatic personality, the Cautious Autocrats, that I reweighted slightly to try and represent the Eldanær Stellar Authority. Unfortunately I can't find a way to get them to prefer opening embassies with other species. There are events to try and prompt the AI to set the preferred slavery types on the K'foori and Zdremites, but the AI seems to be able to change slavery policies even if they are on cooldown.
+
+The bulk of the scripting is to support game setup and the new Colossus weapon. Have fun necrophaging entire worlds!
+
+[h1]Recommended Companion Mods[/h1]
+
+I've made a few fix/enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=2484702578]Technician Job Priority Fix for Slaves[/url] helps K'foori properly take technician jobs if you use any slavery type other than "Domestic Servitude." If you want the same fix but also want some rebalancing of the Prosperity traditions (because they were not updated as Pop counts were decreased) try [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2497266630]Prosperity Tradition Rebalance for 3.0.3[/url].
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Primitive Conquest Enhancements[/url] helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
+
+[h1]Known Issues[/h1]
+
+Because [i]gov_bureaucratic_autocracy[/i] is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:
+
+[code]
+[14:43:11][effect_impl.cpp:18754]: Bureaucratic Autocracy is missing an option in pirate.1, using fallback option instead at file: events/pirate_events.txt line: 215
+[/code]
+
+[h1]Changelog[/h1]
+
+[list]
+[*]1.0.0 Initial version
+[*]2.0.0 Support Planetary Modifier Enhancements new version
+[*]2.0.1 Improve README and Steam description (no functionality changes)
+[*]2.1.0 Tagged as "Military" and added the dependencies to the [i].mod[/i] file, including requirement for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Battle Thralls can be Military Leaders[/url]
+[/list]

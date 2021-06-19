@@ -1,0 +1,53 @@
+# Hibernating Lithoids are generated on lithoid homeworlds at game-start
+d_hibernating_zdremites = {
+	icon = d_hibernating_lithoids
+	time = 360
+	is_for_colonizeable = yes
+	category = deposit_cat_rare_blocker
+	potential = { always = no }
+	on_cleared = {
+		if = {
+			limit = {
+				any_owned_pop = {
+					is_gestalt = no
+					is_robot_pop = no
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					is_gestalt = no
+					is_robot_pop = no
+				}
+				root = {
+					create_pop = {
+						species = PREV
+					}
+				}
+			}
+		}
+		else = {
+			random_owned_pop = {
+				root = {
+					create_pop = {
+						species = PREV
+					}
+				}
+			}
+		}
+	}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			minerals = 1000
+		}
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2
+			from = {
+				is_homeworld = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,242 @@
+﻿### Fungoid 2b
+### Created by Maximilian Olbers
+### Modified and expanded by Nick Butcher
+
+FUN2b = {
+	category = "Fungoid"
+	should_name_home_system_planets = no
+	randomized = no
+	ship_names = {
+		generic = {
+			Yehm-Guulyeg Yehm-Frahan Yehm-Qiigrud Yehm-Priidgynn Yehm-Taagrid Yehm-Neerolg Yehm-Tuurazh Yehm-Phuetl Yehm-Houtrend
+			Yehm-Yglaagd Yehm-Ruuvgru Yehm-Tiiqup Yehm-Daaremt Yehm-Traguud Yehm-Wootunn Yehm-Raaslurg Yehm-Rehm Yehm-Nargudd
+			Yehm-Fiilyub Yehm-Raasud Yehm-Plourh Yehm-Fleeyup Yehm-Putrieeg Yehm-Shaaluv Yehm-Khaarnob Yehm-Truukend Yehm-Gfaleehn
+			Yehm-Yduumen Yehm-Muldaryyn Yehm-Trooghum Yehm-Beiiyud Yehm-Tiipagh Yehm-Sughraad Yehm-Filgfuul Yehm-Buydool
+		}
+
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+
+		titan = {
+		}
+
+		colossus = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}
+
+	# TODO ship classes
+	# ship_class_names = {
+	# 	generic = {
+	# 		Class-A Class-B Class-C Class-D Class-e Class-F Class-G Class-H
+	# 	}
+	# }
+
+	fleet_names = {
+		random_names = {
+			"Quuwo Disseminule" "Qaamara Disseminule" "Shanbaloo Disseminule" "Hooregh Disseminule" "Thuuna Disseminule" "Hathurr Disseminule"
+			"Lurdoosh Disseminule" "Groagsuuh Disseminule" "Lishureeh Disseminule" "Gleggrot Disseminule" "Hahmaar Disseminule"
+			"Thuurgla Disseminule" "Magralha Disseminule" "Qroogm Disseminule" "Greelmash Disseminule" "Kughsee Disseminule"
+		}
+		sequential_name = "%O% Disseminule"
+	}
+
+	army_names = {
+		machine_defense = {
+			sequential_name = "%O% Agarics"
+		}
+		machine_assault_1 = {
+			sequential_name = "%O% Ballistospore"
+		}
+		machine_assault_2 = {
+			sequential_name = "%O% Ballistospore"
+		}
+		machine_assault_3 = {
+			sequential_name = "%O% Ballistospore"
+		}
+		defense_army = {
+			sequential_name = "%O% Agarics"
+		}
+		assault_army = {
+			sequential_name = "%O% Ballistospore"
+		}
+		slave_army = {
+			sequential_name = "%O% Cordyceptic Force"
+		}
+		clone_army = { 
+			sequential_name = "%O% Fungible Formation"
+		}
+		undead_army = {
+			sequential_name = "%O% Dread Force"
+		}
+		robotic_army = {
+			sequential_name = "%O% Robotic Ballistospore"
+		}
+		robotic_defense_army = {
+			sequential_name = "%O% Robotic Agarics"
+		}
+		psionic_army = { 
+			sequential_name = "%O% Psychofungi"
+		}
+		xenomorph_army = {
+			sequential_name = "%O% Encroachers"
+		}
+		gene_warrior_army = {
+			sequential_name = "%O% Slime Molds"
+		}
+		occupation_army = {
+			sequential_name = "%O% Garrison Agarics"
+		}
+		robotic_occupation_army = {
+			sequential_name = "%O% Robotic Garrison Agarics"
+		}
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+	# TODO: more names for each environment type
+	planet_names = {
+		generic = {
+			names = {
+				Jurg-Felooq Jurg-Saphand Jurg-Puuligh Jurg-Sohoodh Jurg-Ghirgaal Jurg-Qurliidh Jurg-Shondaar Jurg-Huquell Jurg-Ondareen
+				Jurg-Gurhiil Jurg-Saromyin Jurg-Qoleath Jurg-Hulaagh Jurg-Sabarandh Jurg-Knootheg Jurg-Shuugrem Jurg-Ularaih Jurg-Upaadgh
+				Jurg-Seroondh Jurg-Faliigh Jurg-Sahuul Jurg-Pabdoon Jurg-Pheedhun Jurg-Wuudhal Jurg-Woraaq
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				Ruun-Elaagh Ruun-Fondeer
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				Wegh-Aldheen
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				Biln-Sheroondh
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				Chool-Feweel
+			}
+		}
+
+		pc_savannah = {
+			names = {
+				Gren-Seliigh
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				Malg-Jendooq
+			}
+		}
+
+		pc_nuked = {
+			names = {
+				Edh-Shoriin
+			}
+		}
+
+		pc_relic = {
+			names = {
+				Geldh-Uruuq
+			}
+		}
+
+		# intentionally duplicates names for pc_relic above
+		pc_city = {
+			names = {
+				Geldh-Uruuq
+			}
+		}
+	}
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				Wuuqam Elgicroon Qaarugm Pubgluurh Mishgreel Shunbloor Seedkugh Huuregdhe Gurloonh Hmaalurd Oleghatuur
+				Thuunolg Liqeerudh Jhulaad Jhutleeg Jhomneel Grodsuun Wluguarq Pugleesh Eguloordh
+			}
+			# can also have full_names_male and/or full_names_female
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			# can also have first_names_male and/or first_names_female
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			# can also have second_names_male and/or second_names_female
+			
+			# Always combined with a regnal second name
+			regnal_first_names = {
+				Wuuqam Elgicroon Qaarugm Pubgluurh Mishgreel Shunbloor Seedkugh Hmaalurd
+			}
+			# can also have regnal_first_names_male and/or regnal_first_names_female
+			
+			# Always combined with a regnal first name
+			regnal_second_names = {
+				Waqqo Sooq Eldoon Gandeeg
+			}
+			# unclear whether this can support _male/_female
+		}
+	}
+}

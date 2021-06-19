@@ -1,0 +1,63 @@
+# Necrophagic Spore Dispersal
+tech_pk_spore_dispersal = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	icon = tech_living_state
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = {
+		"tech_gene_tailoring"
+		"tech_colossus"
+	}
+	ai_update_type = military
+	weight = @tier5weight3
+	potential = {
+		host_has_dlc = "Apocalypse"
+		has_necroids = yes
+		has_country_flag = colossus_project
+		has_origin = origin_necrophage
+		owner_species = { is_species_class = "FUN" }
+	}
+	weight_modifier = {
+		factor = 0.50
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_pk_spore_dispersal }
+			}
+		}
+		modifier = {
+			factor = 0.20
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_biology"
+				}
+			}			
+		}
+	}
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 5.0
+			has_origin = origin_necrophage
+			owner_species = { is_species_class = "FUN" }
+		}
+	}
+}
