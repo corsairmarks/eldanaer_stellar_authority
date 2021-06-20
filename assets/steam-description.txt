@@ -18,7 +18,11 @@ The species bios are not visible in-game other than the main empire-level descri
 
 For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].
 
-[h1]Recommended Companion Mods[/h1]
+[h2]Post-Game Start[/h2]
+
+This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
+
+[h2]Recommended Companion Mods[/h2]
 
 I've made a few fix/enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 
@@ -51,5 +55,14 @@ Because [i]gov_bureaucratic_autocracy[/i] is not a built-in type of government, 
 	[*]Changed usage of [i]owner_main_species[/i] to [i]owner_species[/i] (based on [url=https://forum.paradoxplaza.com/forum/developer-diary/stellaris-dev-diary-204-scripting-language-and-moddability-improvements.1461327/]Dev Diary 204[/url])
 	[*]High-G origin gives +5% happiness on high-G planets, -5% on low-G
 	[/list]
-[*]2.2.0 Add event to flag the game as having this mod installed (global flag [i]eldanaer_stellar_authority_installed[/i])
+[*] 2.2.0 Maintenance release
+    [list]
+    [*]Add event to flag the game as having this mod installed (global flag [i]eldanaer_stellar_authority_installed[/i])
+    [*]Remove extra images files to keep distribution lightweight
+    [*]Update README
+    [/list]
 [/list]
+
+[h2]Source Code[/h2]
+
+[url=https://github.com/corsairmarks/eldanaer_stellar_authority]Hosted on Github[/url]
