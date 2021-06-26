@@ -22,6 +22,10 @@ For more information on the species design and their species bios, please see th
 
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
+[h2]Required Dependect Mods[/h2]
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=2496357128]Planetary Modifier Enhancements[/url] is used to apply the "Part of an Extensive Moon System" to the homeworld.
+
 [h2]Recommended Companion Mods[/h2]
 
 I've made a few fix/enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
@@ -61,6 +65,7 @@ Because [i]gov_bureaucratic_autocracy[/i] is not a built-in type of government, 
     [*]Remove extra images files to keep distribution lightweight
     [*]Update README
     [/list]
+[*]2.2.1 Add "Technologies" tag because of the Colossus weapon, explicit mod dependency in description
 [/list]
 
 [h2]Source Code[/h2]

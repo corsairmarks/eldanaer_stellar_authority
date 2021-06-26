@@ -107,6 +107,10 @@ The bulk of the scripting is to support game setup and the new Colossus weapon. 
 
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
+## Required Dependect Mods
+
+[Planetary Modifier Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2496357128) is used to apply the "Part of an Extensive Moon System" to the homeworld.
+
 ## Recommended Companion Mods
 
 I've made a few fix/enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
@@ -139,6 +143,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Add event to flag the game as having this mod installed (global flag `eldanaer_stellar_authority_installed`)
     * Remove extra images files to keep distribution lightweight
     * Update README
+* 2.2.1 Add "Technologies" tag because of the Colossus weapon, explicit mod dependency in description
 
 ## Source Code
 
