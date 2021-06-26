@@ -6,13 +6,6 @@ on_game_start = {
 	}
 }
 
-# no scope, like on_game_start
-on_monthly_pulse = {
-	events = {
-		eldanaer.13 # flag mod as installed, just in case this mod was added after game start
-	}
-}
-
 # THIS = country
 on_game_start_country = {
 	events = {
