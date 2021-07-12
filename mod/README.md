@@ -107,7 +107,7 @@ The bulk of the scripting is to support game setup and the new Colossus weapon. 
 
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
-## Required Dependect Mods
+## Required Mod Dependencies
 
 [Planetary Modifier Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2496357128) is used to apply the "Part of an Extensive Moon System" to the homeworld.
 
