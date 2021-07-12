@@ -144,10 +144,11 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Remove extra images files to keep distribution lightweight
     * Update README
 * 2.2.1 Add "Technologies" tag because of the Colossus weapon, explicit mod dependency in description
+* 2.3.0 Add install flag for single-player game load
 
 ## Source Code
 
-[Hosted on Github](https://github.com/corsairmarks/eldanaer_stellar_authority)
+Hosted on [Github](https://github.com/corsairmarks/eldanaer_stellar_authority)
 
 ### Development Notes
 

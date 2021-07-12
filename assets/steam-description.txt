@@ -46,30 +46,10 @@ Because [i]gov_bureaucratic_autocracy[/i] is not a built-in type of government, 
 
 [h1]Changelog[/h1]
 
-[list]
-[*]1.0.0 Initial version
-[*]2.0.0 Support Planetary Modifier Enhancements new version
-[*]2.0.1 Improve README and Steam description (no functionality changes)
-[*]2.1.0
-	[list]
-	[*]Tagged as "Military" because of the Colossus weapon
-	[*]added the dependency on [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357128]Planetary Modifier Enhancements[/url] to the [i].mod[/i] file as well
-	[*]Fixed scripted 3rd trait for Eldanaer starting governor - was incorrectly adding Iron Fist a second time instead of Righteous
-	[*]Fix high gravity origin trait to allow exactly one of the high/regular/low-G versions at a time
-	[*]Changed usage of [i]owner_main_species[/i] to [i]owner_species[/i] (based on [url=https://forum.paradoxplaza.com/forum/developer-diary/stellaris-dev-diary-204-scripting-language-and-moddability-improvements.1461327/]Dev Diary 204[/url])
-	[*]High-G origin gives +5% happiness on high-G planets, -5% on low-G
-	[/list]
-[*] 2.2.0 Maintenance release
-    [list]
-    [*]Add event to flag the game as having this mod installed (global flag [i]eldanaer_stellar_authority_installed[/i])
-    [*]Remove extra images files to keep distribution lightweight
-    [*]Update README
-    [/list]
-[*]2.2.1 Add "Technologies" tag because of the Colossus weapon, explicit mod dependency in description
-[/list]
+See the [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2496360535]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
-[url=https://github.com/corsairmarks/eldanaer_stellar_authority]Hosted on Github[/url]
+Hosted on [url=https://github.com/corsairmarks/eldanaer_stellar_authority]Github[/url]
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
