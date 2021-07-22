@@ -18,7 +18,7 @@ The species bios are not visible in-game other than the main empire-level descri
 
 For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].
 
-[h2]Post-Game Start[/h2]
+[h2]When to Install[/h2]
 
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
@@ -46,7 +46,7 @@ Because [i]gov_bureaucratic_autocracy[/i] is not a built-in type of government, 
 
 [h1]Changelog[/h1]
 
-See the [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2496360535]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2496360535]Change Notes[/url]
 
 [h2]Source Code[/h2]
 

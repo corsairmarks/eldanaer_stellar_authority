@@ -103,7 +103,7 @@ There is a new diplomatic personality, the Cautious Autocrats, that I reweighted
 
 The bulk of the scripting is to support game setup and the new Colossus weapon. Have fun necrophaging entire worlds!
 
-## Post-Game Start
+## When to Install
 
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
