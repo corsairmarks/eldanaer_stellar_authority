@@ -49,7 +49,6 @@ country_event = {
 					clear_planet_modifiers = yes
 					add_modifier = {
 						modifier = "dangerous_wildlife"
-						days = -1
 					}
 					set_planet_flag = zdremite_homeworld@ROOT
 					create_species = {
@@ -77,9 +76,8 @@ country_event = {
 						# will end up with "none" which displays as blank or the last selected species.
 						change_species_portrait = "lith8"
 						set_species_flag = zdremite_species@ROOT
-						# flags from "Battle Thralls can be Military Leaders" to allow the Zdremites to be leaders
-						set_species_flag = allow_military_leaders_for_xenophobe
-						set_species_flag = allow_military_leaders_for_necrophage
+						# flag from "Battle Thralls can be Military Leaders" to allow the Zdremites to be leaders
+						set_species_flag = allow_military_leaders_honored_protectors@ROOT
 					}
 					create_country = {
 						name = "PRESCRIPTED_zdremite"
@@ -279,7 +277,6 @@ event = {
 					}
 					add_modifier = {
 						modifier = lush_planet
-						days = -1
 					}
 				}
 				if = {
@@ -294,7 +291,6 @@ event = {
 					orbit = {
 						add_modifier = {
 							modifier = extensive_moon_system
-							days = -1
 						}
 						apply_extensive_moon_system_child_modifier_planet = yes
 					}

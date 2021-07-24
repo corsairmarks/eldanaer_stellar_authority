@@ -143,7 +143,6 @@ country_event = {
 		capital_scope = {
 			add_modifier = {
 				modifier = "high_gravity"
-				days = -1
 			}
 		}
 	}
