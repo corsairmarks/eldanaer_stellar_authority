@@ -11,18 +11,6 @@ remove_generic_randomized_positive_traits = {
 }
 
 # THIS should be a leader
-# removes the flag signaling that a leader has recently gained a trait
-remove_leader_recently_gained_trait = {
-	remove_leader_flag = has_gained_trait
-}
-
-# THIS should be a leader
-# removes the flag signaling that a leader has already gained a trait from levelling up
-remove_leader_gained_level_trait = {
-	remove_leader_flag = has_gained_level_trait
-}
-
-# THIS should be a leader
 # removes all governor-specific traits that can be randomly assigned
 remove_governor_randomized_positive_traits = {
 	if = {
