@@ -244,12 +244,14 @@ country_event = {
 						add_trait = leader_trait_bureaucrat
 					}
 					set_leader_flag = has_gained_level_trait # pretend like this leader gained a level-up trait - it's actually scripted in eldanaer.30
+					set_leader_flag = has_gained_governor_level_trait # pretend like this leader gained a governor level-up trait - it's actually scripted in eldanaer.30
 				}
 			}
 		}
 		ruler = {
 			set_leader_flag = eldanaer_stellar_authority_initial_ruler
 			set_leader_flag = has_gained_level_trait # pretend like this leader gained a level-up trait - it's actually scripted in eldanaer.31
+			set_leader_flag = has_gained_ruler_level_trait # pretend like this leader gained a ruler level-up trait - it's actually scripted in eldanaer.31
 		}
 	}
 }
