@@ -146,7 +146,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
 * 2.2.1 Add "Technologies" tag because of the Colossus weapon, explicit mod dependency in description
 * 2.3.0 Add install flag for single-player game load
 * 2.3.1 Support new flag from Full Military Service for Battle Thralls
-* 2.3.2 Support new flag from Leader Traits: Enhanced Randomisation
+* 2.3.2 Support new flag from Leader Traits: Enhanced Randomisation, fix High-G origin so starting Pops have the positive trait
 
 ## Source Code
 
