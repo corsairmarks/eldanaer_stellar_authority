@@ -144,6 +144,16 @@ country_event = {
 			add_modifier = {
 				modifier = "high_gravity"
 			}
+			# because the modifier is added after the Pops, they have the neutral
+			# (rather than positive) trait; this fixes it upon game start
+			every_owned_pop = {
+				pop_event = {
+					id = origin_high_gravity_evolution.1
+					scopes = {
+						from = PREV
+					}
+				}
+			}
 		}
 	}
 }
