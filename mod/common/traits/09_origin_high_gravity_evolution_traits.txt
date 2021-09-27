@@ -1,5 +1,5 @@
-trait_high_gravity_evolution_1 = {
-	icon = "gfx/interface/icons/traits/trait_high_gravity_evolution_1.dds"
+trait_high_gravity_evolution = {
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_planet.dds"
 	initial = no
 	modification = no
 	randomized = no
@@ -8,44 +8,22 @@ trait_high_gravity_evolution_1 = {
 	potential_crossbreeding_chance = 0.33
 	modifier = {
 		pop_environment_tolerance = 0.05
+	}
+	custom_tooltip_with_modifiers = trait_high_gravity_evolution_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { has_modifier = high_gravity }
+		}
+		planet_jobs_produces_mult = 0.05
 		pop_happiness = 0.05
 	}
-	slave_cost = {
-		energy = 25
-	}
-	ai_weight = {
-		weight = 0
-	}
-}
-
-trait_high_gravity_evolution_2 = {
-	icon = "gfx/interface/icons/traits/trait_high_gravity_evolution_2.dds"
-	initial = no
-	modification = no
-	randomized = no
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	sorting_priority = 30
-	potential_crossbreeding_chance = 0.33
-	modifier = {
-	}
-	slave_cost = {
-		energy = 25
-	}
-	ai_weight = {
-		weight = 0
-	}
-}
-
-trait_high_gravity_evolution_3 = {
-	icon = "gfx/interface/icons/traits/trait_high_gravity_evolution_3.dds"
-	initial = no
-	modification = no
-	randomized = no
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	sorting_priority = 30
-	potential_crossbreeding_chance = 0.33
-	modifier = {
-		pop_environment_tolerance = -0.05
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { has_modifier = low_gravity }
+		}
+		planet_jobs_produces_mult = -0.05
 		pop_happiness = -0.05
 	}
 	slave_cost = {
