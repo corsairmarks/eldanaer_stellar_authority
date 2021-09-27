@@ -7,7 +7,18 @@ has_eldanaer_prerequisites = {
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
-		is_a_habitable_planet_megastructure = yes
+		# intentionally omits crisis planet types (pc_ai, pc_infested) because Pops can't live there
+		# intentionally omits pc_machine because only Driven Assimilator cyborgs or robotic Pops can live there
+		OR = {
+			habitable_planet = yes
+			is_planet_class = pc_nuked
+			AND = {
+				# pc_hive is only allowed for hive empires
+				FROM.owner = { is_hive_empire = yes }
+				is_planet_class = pc_hive
+			}
+			habitable_structure = yes
+		}
 		NOT = { has_planet_flag = merg_forbidden_target } # The Merger of Rules
 	}
 	custom_tooltip = {
@@ -36,26 +47,20 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			custom_tooltip = {
 				fail_text = primitives_not_in_borders
 				exists = space_owner
-				space_owner = { is_same_value = FROM.owner }
+				space_owner = { is_country = FROM.owner }
 			}
 		}
 		# planets owned by the attacker are targetable if they have any pops that can be necrophaged
 		else_if = {
-			limit = { owner = { is_same_value = FROM.owner } }
+			limit = { is_owned_by = FROM.owner }
 			custom_tooltip = {
 				fail_text = no_necrophagable_pops
 				any_owned_pop = {
-					species = {
-						# same logic as species_can_be_necrophaged (common\scripted_triggers\00_scripted_triggers.txt)
-						# but PREV is replaced with FROM so it can be used in this trigger (FROM is the colossus).
-						NOR = {
-							is_archetype = MACHINE
-							is_archetype = ROBOT
-							is_archetype = PRESAPIENT
-							is_same_species = FROM.owner_species
-						}
-						species_has_happiness_with_owner = FROM.owner
-					}
+					# similar logic as species_can_be_necrophaged (common\scripted_triggers\00_scripted_triggers.txt)
+					is_robot_pop = no
+					is_sapient = yes
+					NOT = { is_same_species = FROM.owner_species }
+					species = { species_has_happiness_with_owner = FROM.owner }
 				}
 			}
 		}
@@ -66,15 +71,10 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 				pop_percentage = {
 					percentage >= 0.5
 					limit = {
-						species = {
-							NOR = {
-								is_archetype = MACHINE
-								is_archetype = ROBOT
-								is_archetype = PRESAPIENT
-								# assumes that species of the same type as the attacker are compelled to revolt - so they count towards the minimum
-							}
-							species_has_happiness_with_owner = FROM.owner
-						}
+						is_robot_pop = no
+						is_sapient = yes
+						# assumes that species of the same type as the attacker are compelled to revolt - so they count towards the minimum
+						species = { species_has_happiness_with_owner = FROM.owner }
 					}
 				}
 			}
