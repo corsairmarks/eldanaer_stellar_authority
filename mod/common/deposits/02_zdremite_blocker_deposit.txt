@@ -2,23 +2,34 @@
 d_hibernating_zdremites = {
 	icon = d_hibernating_lithoids
 	time = 360
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare_blocker
 	potential = { always = no }
 	on_cleared = {
 		if = {
 			limit = {
 				any_owned_pop = {
-					is_gestalt = no
-					is_robot_pop = no
+					species = { home_planet = { is_planet = PREVPREVPREV } }
+					is_lithoid = yes
 				}
 			}
 			random_owned_pop = {
 				limit = {
-					is_gestalt = no
-					is_robot_pop = no
+					species = { home_planet = { is_planet = PREVPREVPREV } }
+					is_lithoid = yes
 				}
-				root = {
+				ROOT = {
+					create_pop = {
+						species = PREV
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { any_owned_pop = { is_lithoid = yes } }
+			random_owned_pop = {
+				limit = { is_lithoid = yes }
+				ROOT = {
 					create_pop = {
 						species = PREV
 					}
@@ -27,7 +38,7 @@ d_hibernating_zdremites = {
 		}
 		else = {
 			random_owned_pop = {
-				root = {
+				ROOT = {
 					create_pop = {
 						species = PREV
 					}
