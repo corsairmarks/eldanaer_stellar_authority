@@ -743,7 +743,7 @@ planet_event = {
 			kill_pop = yes
 		}
 		if = {
-			limit = { owner = { has_swapped_tradition = tr_harmony_unity_of_self } }
+			limit = { owner = { has_active_tradition = tr_harmony_unity_of_self } }
 			owner = {
 				add_monthly_resource_mult = {
 					resource = unity
