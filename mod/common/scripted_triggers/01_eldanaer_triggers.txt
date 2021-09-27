@@ -1,13 +1,14 @@
 has_eldanaer_prerequisites = {
 	has_necroids = yes # eldanaer: origin, city graphical culture
 	has_plantoids = yes # k'foor: portrait
-	has_lithoids = yes # zdremites: species class
+	has_lithoids = yes # zdremite: species class
 }
 
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		is_a_habitable_planet_megastructure = yes
+		NOT = { has_planet_flag = merg_forbidden_target } # The Merger of Rules
 	}
 	custom_tooltip = {
 		fail_text = is_shielded
