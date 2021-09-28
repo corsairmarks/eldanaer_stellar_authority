@@ -160,6 +160,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Starting sector has a custom name
     * Necrophage colossus weapon updated to be unable to fire on crisis worlds, but fungoid, necrophage, hive minds can use it against hive planets
     * Colossus weapon works with new game features
+    * Colossus weapon ignores presapients
 
 ## Source Code
 
