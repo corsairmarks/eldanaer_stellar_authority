@@ -147,6 +147,13 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
 * 2.3.0 Add install flag for single-player game load
 * 2.3.1 Support new flag from Full Military Service for Battle Thralls
 * 2.3.2 Support new flag from Leader Traits: Enhanced Randomisation, fix High-G origin so starting Pops have the positive trait
+* 3.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+    * Origin: High-G trait uses new triggered bonuses (similar to the changes to Void Dweller)
+    * Origin: High-G is prohibited for Machine Intelligences
+    * Handle hive mind necrophages (most of the special Eldanær setup is disabled but the Zdremites will still spawn)
+    * Starting sector has a custom name
+    * Necrophage colossus weapon updated to be unable to fire on crisis worlds, but fungoid, necrophage, hive minds can use it against hive planets
+    * Colossus weapon works with new game features
 
 ## Source Code
 
