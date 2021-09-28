@@ -76,6 +76,10 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 						# assumes that species of the same type as the attacker are compelled to revolt - so they count towards the minimum
 						species = { species_has_happiness_with_owner = FROM.owner }
 					}
+					exclude = {
+						is_robot_pop = no
+						is_sapient = no
+					}
 				}
 			}
 		}

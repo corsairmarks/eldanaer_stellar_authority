@@ -683,7 +683,11 @@ planet_event = {
 			set_owner = FROM.owner
 		}
 		every_owned_pop = {
-			limit = { species = { species_can_be_necrophaged = yes } }
+			limit = {
+				is_sapient = yes
+				is_robot_pop = no
+				NOT = { is_same_species = PREV.owner_species }
+			}
 			# This section copies necrophage logic from necroids.1 (from events\necroids_events_1.txt), but doesn't look
 			# for any existing necrophage pops on the planet to duplicate.  The opinion penalties here are in addition to
 			# the above penalties for wholesale necrophaging a world - empires REALLY HATE getting necrophaged.
@@ -810,7 +814,7 @@ planet_event = {
 			if = {
 				limit = {
 					any_owned_species = {
-						is_robotic_species = yes
+						is_robotic = yes
 						species_has_happiness_with_owner = PREV.owner
 					}
 					owner = {
@@ -884,6 +888,10 @@ planet_event = {
 								pop_percentage = {
 									percentage > 0.4
 									limit = { is_robot_pop = yes }
+									exclude = {
+										is_robot_pop = no
+										is_sapient = no
+									}
 								}
 							}
 							add_planet_devastation = 25
@@ -893,6 +901,10 @@ planet_event = {
 								pop_percentage = {
 									percentage > 0.3
 									limit = { is_robot_pop = yes }
+									exclude = {
+										is_robot_pop = no
+										is_sapient = no
+									}
 								}
 							}
 							add_planet_devastation = 20
@@ -902,6 +914,10 @@ planet_event = {
 								pop_percentage = {
 									percentage > 0.2
 									limit = { is_robot_pop = yes }
+									exclude = {
+										is_robot_pop = no
+										is_sapient = no
+									}
 								}
 							}
 							add_planet_devastation = 15
@@ -911,6 +927,10 @@ planet_event = {
 								pop_percentage = {
 									percentage > 0.1
 									limit = { is_robot_pop = yes }
+									exclude = {
+										is_robot_pop = no
+										is_sapient = no
+									}
 								}
 							}
 							add_planet_devastation = 10
@@ -920,6 +940,10 @@ planet_event = {
 								pop_percentage = {
 									percentage > 0.0
 									limit = { is_robot_pop = yes }
+									exclude = {
+										is_robot_pop = no
+										is_sapient = no
+									}
 								}
 							}
 							add_planet_devastation = 5
