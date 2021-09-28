@@ -18,37 +18,37 @@ d_hibernating_zdremites = {
 					species = { home_planet = { is_planet = PREVPREVPREV } }
 					is_lithoid = yes
 				}
-				ROOT = {
-					create_pop = {
-						species = PREV
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = { any_owned_pop = { is_lithoid = yes } }
-			random_owned_pop = {
-				limit = { is_lithoid = yes }
-				ROOT = {
-					create_pop = {
-						species = PREV
-					}
-				}
+				ROOT = { create_pop = { species = PREV } }
 			}
 		}
 		else = {
-			random_owned_pop = {
-				ROOT = {
-					create_pop = {
-						species = PREV
-					}
-				}
-			}
+			owner = { add_resource = { minerals = 300 } }
 		}
 	}
 	resources = {
 		category = deposit_blockers
 		cost = {
+			trigger = {
+				planet = {
+					NOT = {
+						any_owned_pop = {
+							species = { home_planet = { is_planet = PREVPREVPREV } }
+							is_lithoid = yes
+						}
+					}
+				}
+			}
+			energy = 300
+		}
+		cost = {
+			trigger = {
+				planet = {
+					any_owned_pop = {
+						species = { home_planet = { is_planet = PREVPREVPREV } }
+						is_lithoid = yes
+					}
+				}
+			}
 			minerals = 1000
 		}
 	}
