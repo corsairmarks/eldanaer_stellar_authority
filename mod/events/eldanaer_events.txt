@@ -132,42 +132,28 @@ country_event = {
 						add_deposit = d_hibernating_zdremites
 						# Purge fallbacks - clean up highest-ranking unemployed pops first, then move down strata ending with random workers
 						if = {
-							limit = {
-								any_owned_pop = {
-									is_pop_category = specialist
-									is_unemployed = yes
-								}
-							}
+							limit = { any_owned_pop = { is_unemployed = yes } }
 							random_owned_pop = {
-								limit = {
-									is_pop_category = specialist
-									is_unemployed = yes
-								}
+								limit = { is_unemployed = yes }
 								kill_pop = yes
 							}
 						}
 						else_if = {
-							limit = {
-								any_owned_pop = {
-									is_pop_category = worker
-									is_unemployed = yes
-								}
-							}
+							limit = { any_owned_pop = { has_job = peasant } }
 							random_owned_pop = {
-								limit = {
-									is_pop_category = worker
-									is_unemployed = yes
-								}
+								limit = { has_job = peasant }
 								kill_pop = yes
 							}
 						}
-						else_if = {
-							limit = { any_owned_pop = { is_pop_category = worker } }
+						else = {
 							random_owned_pop = {
-								limit = { is_pop_category = worker }
 								kill_pop = yes
 							}
 						}
+					}
+					every_owned_pop = {
+						unemploy_pop = yes
+						clear_pop_category = yes
 					}
 					check_planet_employment = yes
 					# Make any random blockers have a more dangerous flavor.
@@ -181,8 +167,17 @@ country_event = {
 					}
 					set_name = "PRESCRIPTED_planet_name_zdremite"
 					change_colony_foundation_date = -461 # this number matches necroids.4
+					while = {
+						count = 8 # double the normal amount - Zdremites are Steam Age (more Pops) and are militarist
+						create_army = {
+							owner = last_created_country
+							type = primitive_additional_army
+							species = last_created_country
+						}
+					}
 				}
 			}
+			# reroll_random = yes
 			# closest_system = {
 			#	limit = { has_star_flag = neighbor_t2_second_colony }
 			#	max_steps = 6
@@ -192,16 +187,16 @@ country_event = {
 			#			is_colony = no
 			#			has_planet_flag = prescripted_ideal
 			#		}
-			#		generate_early_primitives_on_planet = yes
+			#		generate_very_early_primitives_on_planet = yes
 			#		set_name = random
 			#		change_colony_foundation_date = -1275
-			#	}
-			#	last_created_country = {
-			#		if = {
-			#			limit = {
-			#				is_country_type = primitive
+			#		while = {
+			#			count = 4
+			#			create_army = {
+			#				owner = last_created_country
+			#				type = primitive_additional_army
+			#				species = last_created_country
 			#			}
-			#			randomise_early_primitive_age_effect = yes
 			#		}
 			#	}
 			# }
@@ -217,6 +212,7 @@ country_event = {
 	trigger = {
 		has_country_flag = is_eldanaer_stellar_authority
 		has_origin = origin_necrophage
+		is_regular_empire = yes
 	}
 	immediate = {
 		# Set the K'foori to decently-treated chattel slaves
@@ -246,7 +242,7 @@ country_event = {
 			cooldown = no
 		}
 		capital_scope.sector = {
-			# set_name = "START_esa_sector_name"
+			set_name = "START_esa_sector_name"
 			# flag the initial governor for custom level-ups, set to bureaucrat
 			leader = {
 				set_name = "START_esa_initial_governor_name"
@@ -307,9 +303,7 @@ event = {
 						}
 					}
 					orbit = {
-						add_modifier = {
-							modifier = extensive_moon_system
-						}
+						add_modifier = { modifier = extensive_moon_system }
 						apply_extensive_moon_system_child_modifier_planet = yes
 					}
 				}
@@ -326,6 +320,7 @@ country_event = {
 		is_ai = yes
 		has_country_flag = is_eldanaer_stellar_authority
 		has_origin = origin_necrophage
+		is_regular_empire = yes
 	}
 	immediate = {
 		# Set the K'foori to decently-treated chattel slaves
@@ -367,6 +362,7 @@ country_event = {
 		is_ai = yes
 		has_country_flag = is_eldanaer_stellar_authority
 		has_origin = origin_necrophage
+		is_regular_empire = yes
 	}
 	immediate = {
 		# Set the Zdremites to well-treated battle thralls
@@ -433,6 +429,7 @@ planet_event = {
 			is_ai = yes
 			has_country_flag = is_eldanaer_stellar_authority
 			has_origin = origin_necrophage
+			is_regular_empire = yes
 		}
 	}
 	immediate = {
@@ -450,6 +447,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = is_eldanaer_stellar_authority
+		is_regular_empire = yes
 		FROM = {
 			has_leader_flag = eldanaer_stellar_authority_initial_governor
 			num_traits < 3
@@ -492,6 +490,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_country_flag = is_eldanaer_stellar_authority
+		is_regular_empire = yes
 		FROM = {
 			has_leader_flag = eldanaer_stellar_authority_initial_ruler
 			num_traits < 3
@@ -536,7 +535,7 @@ planet_event = {
 				# necrophage conversion is close enough in concept to nanobots that this mostly makes sense.
 				set_timed_country_flag = {
 					flag = resolution_breached_fired_assimilator
-					days = 3600
+					years = 10
 				}
 			}
 		}
@@ -553,7 +552,10 @@ planet_event = {
 				}
 			}
 			# Generate threat
-			add_threat = { who = FROM.owner amount = 3 }
+			add_threat = {
+				who = FROM.owner
+				amount = 3
+			}
 			# modifier for allies + those upset by genocide
 			every_country = {
 				limit = {
@@ -598,10 +600,10 @@ planet_event = {
 					who = FROM.owner
 				}
 				if = {
-					limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+					limit = { is_gestalt = no }
 					add_modifier = {
 						modifier = colossus_victim
-						days = 10800 # 30 years
+						years = 30
 					}
 				}
 			}
@@ -692,15 +694,14 @@ planet_event = {
 				}
 			}
 			ROOT = {
-				create_pop = {
-					species = owner_species
-				}
+				create_pop = { species = owner_species }
 				if = {
 					limit = {
 						last_created_pop = { NOT = { ideal_planet_class = ROOT } }
 						NOR = {
 							uses_district_set = habitat
 							uses_district_set = ring_world
+							uses_district_set = shattered_ring_world
 							uses_district_set = city_world
 							uses_district_set = hive_world
 							uses_district_set = machine_world
@@ -722,12 +723,12 @@ planet_event = {
 			every_country = {
 				limit = {
 					has_communications = ROOT.owner
-					NOT = { is_country = ROOT.owner }
-					NOT = { is_same_species = prev }
-					NOT = { has_ai_personality_behaviour = purger }
-					NOT = { has_origin = origin_necrophage }
-					NOT = { has_ethic = ethic_gestalt_consciousness }
+					is_gestalt = no
 					NOR = {
+						is_country = ROOT.owner
+						is_same_species = PREV
+						has_ai_personality_behaviour = purger
+						has_origin = origin_necrophage
 						has_valid_civic = civic_death_cult
 						has_valid_civic = civic_death_cult_corporate
 					}
@@ -741,25 +742,38 @@ planet_event = {
 						level >= 2
 					}
 				}
-				add_opinion_modifier = { who = ROOT.owner modifier = opinion_necrophage }
+				add_opinion_modifier = {
+					who = ROOT.owner
+					modifier = opinion_necrophage
+				}
 			}
 			every_country = {
 				limit = {
 					has_communications = ROOT.owner
 					NOT = { is_country = ROOT.owner }
-					is_same_species = prev
+					is_same_species = PREV
 					has_intel_level = {
 						who = FROM
 						category = economy
 						level >= 1 # lower because you'd hear from a friend of a friend
 					}
 				}
-				add_opinion_modifier = { who = ROOT.owner modifier = opinion_necrophage_our_species }
+				add_opinion_modifier = {
+					who = ROOT.owner
+					modifier = opinion_necrophage_our_species
+				}
 			}
 			kill_pop = yes
 		}
 		if = {
-			limit = { owner = { has_active_tradition = tr_harmony_unity_of_self } }
+			limit = {
+				owner = {
+					OR = {
+						has_active_tradition = tr_harmony_unity_of_self
+						has_active_tradition = tr_synchronicity_unity_of_mind
+					}
+				}
+			}
 			owner = {
 				add_monthly_resource_mult = {
 					resource = unity
@@ -771,19 +785,20 @@ planet_event = {
 		}
 		# if the planet changed ownership...
 		if = {
-			limit = { owner = { NOT = { is_same_value = event_target:former_owner } } }
+			limit = {
+				owner = { NOT = { is_same_value = event_target:former_owner } }
+				any_owned_species = { species_has_happiness_with_owner = PREV.owner }
+			}
 			# if it was originally our colony, our species pops are happy to be liberated
 			if = {
 				limit = { is_original_owner = owner }
-				if = {
-					limit = { NOT = { has_modifier = pop_liberation_fever } }
-					add_modifier = {
-						modifier = pop_liberation_fever
-						years = 10
-					}
-				}
 				every_owned_pop = {
-					limit = { species = { is_same_species = owner_species } }
+					limit = {
+						species = {
+							is_same_species = owner_species
+							species_has_happiness_with_owner = PREV.owner
+						}
+					}
 					remove_modifier = pop_recently_conquered
 					add_modifier = {
 						modifier = pop_liberation_fever
@@ -794,7 +809,10 @@ planet_event = {
 			# if we allow sapient synthetics, then conquered robots might be happy or sad about being conquered
 			if = {
 				limit = {
-					any_owned_pop = { species = { is_archetype = ROBOT } }
+					any_owned_species = {
+						is_robotic_species = yes
+						species_has_happiness_with_owner = PREV.owner
+					}
 					owner = {
 						has_technology = tech_synthetic_workers
 						OR = {
@@ -812,7 +830,10 @@ planet_event = {
 						}
 					}
 					every_owned_pop = {
-						limit = { species = { is_archetype = ROBOT } }
+						limit = {
+							is_robot_pop = yes
+							species = { species_has_happiness_with_owner = PREV.owner }
+						}
 						remove_modifier = pop_recently_conquered
 						add_modifier = {
 							modifier = pop_liberation_fever
@@ -834,7 +855,10 @@ planet_event = {
 							}
 						}
 						every_owned_pop = {
-							limit = { species = { is_archetype = ROBOT } }
+							limit = {
+								is_robot_pop = yes
+								species = { species_has_happiness_with_owner = PREV.owner }
+							}
 							remove_modifier = pop_recently_conquered
 							add_modifier = {
 								modifier = pop_liberation_fever
@@ -845,7 +869,10 @@ planet_event = {
 					# otherwise, their rights stayed the same or were reduced, so they are sad to be conquered
 					else = {
 						every_owned_pop = {
-							limit = { species = { is_archetype = ROBOT } }
+							limit = {
+								is_robot_pop = yes
+								species = { species_has_happiness_with_owner = PREV.owner }
+							}
 							remove_modifier = pop_liberation_fever
 							add_modifier = {
 								modifier = pop_recently_conquered
@@ -856,7 +883,7 @@ planet_event = {
 							limit = {
 								pop_percentage = {
 									percentage > 0.4
-									limit = { species = { is_archetype = ROBOT } }
+									limit = { is_robot_pop = yes }
 								}
 							}
 							add_planet_devastation = 25
@@ -865,7 +892,7 @@ planet_event = {
 							limit = {
 								pop_percentage = {
 									percentage > 0.3
-									limit = { species = { is_archetype = ROBOT } }
+									limit = { is_robot_pop = yes }
 								}
 							}
 							add_planet_devastation = 20
@@ -874,7 +901,7 @@ planet_event = {
 							limit = {
 								pop_percentage = {
 									percentage > 0.2
-									limit = { species = { is_archetype = ROBOT } }
+									limit = { is_robot_pop = yes }
 								}
 							}
 							add_planet_devastation = 15
@@ -883,7 +910,7 @@ planet_event = {
 							limit = {
 								pop_percentage = {
 									percentage > 0.1
-									limit = { species = { is_archetype = ROBOT } }
+									limit = { is_robot_pop = yes }
 								}
 							}
 							add_planet_devastation = 10
@@ -892,11 +919,11 @@ planet_event = {
 							limit = {
 								pop_percentage = {
 									percentage > 0.0
-									limit = { species = { is_archetype = ROBOT } }
+									limit = { is_robot_pop = yes }
 								}
 							}
 							add_planet_devastation = 5
-						 }
+						}
 					}
 				}
 			}
@@ -907,7 +934,12 @@ planet_event = {
 			spawn_habitat_nanobot_effect = yes
 		}
 		else_if = {
-			limit = { is_planet_class = pc_ringworld_habitable }
+			limit = {
+				OR = {
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_shattered_ring_habitable
+				}
+			}
 			spawn_ringworld_nanobot_effect = yes
 		}
 		# Changing the planet class to itself causes a graphical sweep effect
@@ -927,6 +959,7 @@ planet_event = {
 				pc_nuked = { change_pc = pc_nuked }
 				pc_relic = { change_pc = pc_relic }
 				pc_city = { change_pc = pc_city }
+				pc_hive = { change_pc = pc_hive }
 			}
 		}
 	}
@@ -939,17 +972,11 @@ country_event = {
 	title = eldanaer.501.name
 	desc = eldanaer.501.desc
 	picture = GFX_evt_genetic_modification
-	show_sound = event_mystic_reveal
+	show_sound = event_necrophage
 	location = FROM
 	is_triggered_only = yes
 	trigger = {
 		NOT = { has_country_flag = fired_spores }
-		FROM = {
-			NOR = {
-				is_planet_class = pc_habitat
-				is_planet_class = pc_ringworld_habitable
-			}
-		}
 	}
 	immediate = {
 		set_country_flag = fired_spores
