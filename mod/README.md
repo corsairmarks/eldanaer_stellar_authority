@@ -97,11 +97,17 @@ The species bios included here are not visible in-game other than the main empir
 >
 > Their natural strength and steadfast attitude inevitably earns the trust and respect of the Eldanær. Following a brief first contact/annexation war, the Zdremites integrate with the Eldanær and are entrusted as honored protectors from other, dangerous xeno influences.
 
-## Custom Scripting
+# Custom Scripting
 
 There is a new diplomatic personality, the Cautious Autocrats, that I reweighted slightly to try and represent the Eldanær Stellar Authority. Unfortunately I can't find a way to get them to prefer opening embassies with other species. There are events to try and prompt the AI to set the preferred slavery types on the K'foori and Zdremites, but the AI seems to be able to change slavery policies even if they are on cooldown.
 
 The bulk of the scripting is to support game setup and the new Colossus weapon. Have fun necrophaging entire worlds!
+
+## Compatibility
+
+Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
+
+All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
 ## When to Install
 

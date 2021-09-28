@@ -14,9 +14,15 @@ This mod also includes a custom primitive species of lithoids (the Zdremites) th
 
 [h2]Species Design[/h2]
 
-The species bios are not visible in-game other than the main empire-level description available on the empire selection screen. This is because the game cannot load localised text for [i]species_bio[/i] in either prescripted races or the [i]create_species[/i] effect, and also does not support escaped newline characters [i]\n[/i]. This is reported as a bug [url=https://forum.paradoxplaza.com/forum/threads/stellaris-v3-0-2-91c1-species_bio-for-prescripted-countries-or-for-the-create_species-effect-does-not-resolve-localisation-text-and-instead-show.1471611/]here[/url].
+The species bios are not visible in-game other than the main empire-level description available on the empire selection screen. This is because the game cannot load localised text for [b]species_bio[/b] in either prescripted races or the [b]create_species[/b] effect, and also does not support escaped newline characters [b]\n[/b]. This is reported as a bug [url=https://forum.paradoxplaza.com/forum/threads/stellaris-v3-0-2-91c1-species_bio-for-prescripted-countries-or-for-the-create_species-effect-does-not-resolve-localisation-text-and-instead-show.1471611/]here[/url].
 
 For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].
+
+[h1]Compatibility[/h1]
+
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+
+All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
 [h2]When to Install[/h2]
 
@@ -38,7 +44,7 @@ I've made a few fix/enhancement mods that were inspired by things I found in the
 
 [h1]Known Issues[/h1]
 
-Because [i]gov_bureaucratic_autocracy[/i] is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:
+Because [b]gov_bureaucratic_autocracy[/b] is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:
 
 [code]
 [14:43:11][effect_impl.cpp:18754]: Bureaucratic Autocracy is missing an option in pirate.1, using fallback option instead at file: events/pirate_events.txt line: 215
