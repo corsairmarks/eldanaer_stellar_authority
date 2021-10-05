@@ -161,6 +161,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Necrophage colossus weapon updated to be unable to fire on crisis worlds, but fungoid, necrophage, hive minds can use it against hive planets
     * Colossus weapon works with new game features
     * Colossus weapon ignores presapients
+* 3.1.0 Ensure Zdremites have enough mining districts available from deposits
 
 ## Source Code
 
