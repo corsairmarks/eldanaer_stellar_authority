@@ -165,6 +165,25 @@ country_event = {
 							50 = { add_deposit = d_dangerous_wildlife_blocker }
 						}
 					}
+					# extra mining deposits to ensure the correct districts can be added when conquered
+					if = {
+						limit = {
+							num_free_districts = {
+								type = district_mining
+								value < 5
+							}
+						}
+						add_deposit = d_submerged_ore_veins
+					}
+					if = {
+						limit = {
+							num_free_districts = {
+								type = district_mining
+								value < 2
+							}
+						}
+						add_deposit = d_prosperous_mesa
+					}
 					set_name = "PRESCRIPTED_planet_name_zdremite"
 					change_colony_foundation_date = -461 # this number matches necroids.4
 					while = {
