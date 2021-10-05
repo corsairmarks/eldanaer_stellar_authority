@@ -36,7 +36,7 @@ Below are the full details about the portraits, traits, flags, and other game de
 
 **Gameplay Notes:** The Eldanær consider themselves to have culturally transcended their biological drive to necrophage others indiscriminately. Generally, avoid using the Necrophage Purge type unless you develop a particularly hated enemy. They prefer to establish trading partners and maintain commercial pacts, but keep their partners at arm's length. Although "protecting" the secret of their origin fuels their paranoid xenophobia, they don't implicitly hate other species. Open Borders are preferred.
 
-The Stellar Authority is a complex and impenetrable bureaucracy with many overlapping (and sometimes contradictory) layers, so Stratified Economy is preferred for any free Pops. Because the Eldanær consider themselves civilized, they tend to grant Residency to any species in their empire that originated in another space-faring empire and came peacefully (although they generally avoid migration treaties) as well as synthetics. On the other hand, they consider themselves superior to less technologically-advanced societies and view it as no contradition to conquer and enslave primitive species or uplifted species. The slavery type should fit the species traits - living standards can vary, but giving the K'foori and Zdremites Social Welfare or Decent Conditions is preferred.
+The Stellar Authority is a complex and impenetrable bureaucracy with many overlapping (and sometimes contradictory) layers, so Stratified Economy is preferred for any free Pops. Because the Eldanær consider themselves civilized, they tend to grant Residency to any species in their empire that originated in another space-faring empire and came peacefully (although they generally avoid migration treaties) as well as synthetics. On the other hand, they consider themselves superior to less technologically-advanced societies and view it as no contradiction to conquer and enslave primitive species or uplifted species. The slavery type should fit the species traits - living standards can vary, but giving the K'foori and Zdremites Social Welfare or Decent Conditions is preferred.
 
 When selecting a third civic, consider Corvée System to support their many-tiered, authoritarian society, or Merchant Guilds (and the Mercantile diplomatic stance) to lean into their trade ambitions.
 
@@ -89,7 +89,7 @@ The species bios included here are not visible in-game other than the main empir
 * **Traits:**
     * Lithoid
     * Very Strong
-    * Relilient
+    * Resilient
     * Slow Learners
     * Sedentary
 
