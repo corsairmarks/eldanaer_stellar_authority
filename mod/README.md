@@ -162,6 +162,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Colossus weapon works with new game features
     * Colossus weapon ignores presapients
 * 3.1.0 Ensure Zdremites have enough mining districts available from deposits
+    * Minor update for compatibility with Planetary Modifier Enhancements 2.5.0
 
 ## Source Code
 
