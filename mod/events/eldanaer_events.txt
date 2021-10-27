@@ -323,7 +323,9 @@ event = {
 					}
 					orbit = {
 						add_modifier = { modifier = extensive_moon_system }
-						apply_extensive_moon_system_child_modifier_planet = yes
+						planet_event = {
+							id = planetary_modifier_enhancements.2
+						}
 					}
 				}
 			}
