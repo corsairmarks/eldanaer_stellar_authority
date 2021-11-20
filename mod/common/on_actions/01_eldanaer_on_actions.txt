@@ -32,12 +32,26 @@ on_leader_level_up = {
 	}
 }
 
-# THIS/ROOT = planet that have been fired upon
+# THIS = planet that has been fired upon
 # FROM = fleet that fired
 on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	events = {
 		crisis.5015 # Menace Objective - Destroy World/Empire
 		eldanaer.500
+	}
+}
+
+# THIS = planet that will be fired upon
+# FROM = fleet that will fire
+on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL_queued = {
+	events = {
+	}
+}
+
+# THIS = planet that would have been fired upon
+# FROM = fleet would have fired
+on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL_unqueued = {
+	events = {
 	}
 }
 
