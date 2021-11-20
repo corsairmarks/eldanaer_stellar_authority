@@ -50,6 +50,13 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 				space_owner = { is_country = FROM.owner }
 			}
 		}
+		# must have an appropriate primitive interference policy
+		custom_tooltip = {
+			fail_text = primitives_not_full_interference
+			FROM.owner = {
+				has_policy_flag = interference_full
+			}
+		}
 		# planets owned by the attacker are targetable if they have any pops that can be necrophaged
 		else_if = {
 			limit = { is_owned_by = FROM.owner }
