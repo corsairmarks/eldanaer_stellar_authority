@@ -23,7 +23,10 @@ weapon_component_template = { # Necrophagic Spore Dispersal
 		modifier = {
 			weight = 500
 			has_origin = origin_necrophage
-			owner_species = { is_species_class = "FUN" }
+			owner_species = {
+				has_trait = trait_necrophage
+				is_species_class = "FUN"
+			}
 		}
 		modifier = {
 			factor = 2
