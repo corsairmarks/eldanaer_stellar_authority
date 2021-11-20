@@ -105,7 +105,7 @@ The bulk of the scripting is to support game setup and the new Colossus weapon. 
 
 ## Compatibility
 
-Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
@@ -153,7 +153,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
 * 2.3.0 Add install flag for single-player game load
 * 2.3.1 Support new flag from Full Military Service for Battle Thralls
 * 2.3.2 Support new flag from Leader Traits: Enhanced Randomisation, fix High-G origin so starting Pops have the positive trait
-* 3.0.0 Mark as compatible with Stellaris version 3.1.* "Lem"
+* 3.0.0 Mark as compatible with Stellaris version 3.1 "Lem"
     * Origin: High-G trait uses new triggered bonuses (similar to the changes to Void Dweller)
     * Origin: High-G is prohibited for Machine Intelligences
     * Handle hive mind necrophages (most of the special Eldanær setup is disabled but the Zdremites will still spawn)
@@ -163,6 +163,10 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Colossus weapon ignores presapients
 * 3.1.0 Ensure Zdremites have enough mining districts available from deposits
     * Minor update for compatibility with Planetary Modifier Enhancements 2.5.0
+* 4.0.0 Update for Stellaris version 3.2 "Herbert"
+    * Prescripted empire species are both indeterminable gender
+    * Zdremites are indeterminable gender
+    * Planet killer denies usage unless you have full native interference
 
 ## Source Code
 

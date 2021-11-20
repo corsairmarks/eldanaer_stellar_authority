@@ -20,7 +20,7 @@ For more information on the species design and their species bios, please see th
 
 [h1]Compatibility[/h1]
 
-Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
