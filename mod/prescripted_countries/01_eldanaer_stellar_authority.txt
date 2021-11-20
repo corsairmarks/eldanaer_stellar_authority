@@ -12,6 +12,7 @@ eldanaer={
 		# species_bio does not currently accept localisation keys or literal newlines
 		# species_bio="PRESCRIPTED_species_bio_eldanaer"
 		name_list="FUN2b"
+		gender="indeterminant"
 		trait="trait_necrophage"
 		trait="trait_traditional"
 		trait="trait_charismatic"
@@ -29,6 +30,7 @@ eldanaer={
 		# species_bio does not currently accept localisation keys or literal newlines
 		# species_bio="PRESCRIPTED_species_bio_kfoor"
 		name_list="PLANT4"
+		gender="indeterminant"
 		trait="trait_ingenious"
 		trait="trait_rapid_breeders"
 		trait="trait_strong"
@@ -61,7 +63,7 @@ eldanaer={
 		}
 	}
 	ruler={
-		gender=male
+		gender=indeterminable
 		name="PRESCRIPTED_ruler_name_eldanaer"
 		portrait="fun7"
 		texture=3
