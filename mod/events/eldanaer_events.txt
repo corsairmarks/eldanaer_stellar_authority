@@ -980,12 +980,7 @@ planet_event = {
 			spawn_habitat_nanobot_effect = yes
 		}
 		else_if = {
-			limit = {
-				OR = {
-					is_planet_class = pc_ringworld_habitable
-					is_planet_class = pc_shattered_ring_habitable
-				}
-			}
+			limit = { is_ringworld = yes }
 			spawn_ringworld_nanobot_effect = yes
 		}
 		# Changing the planet class to itself causes a graphical sweep effect
