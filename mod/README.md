@@ -167,6 +167,8 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Prescripted empire species are both indeterminable gender
     * Zdremites are indeterminable gender
     * Planet killer denies usage unless you have full native interference
+    * Add interaction with [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684): primitive worlds necrophaged via the Necrophage Spore Diffuser will allow you to acquire its necrophaged leaders
+    * Add interaction with [Primitive Conquest Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2488154830): primitive worlds necrophaged via the Necrophage Spore Diffuser will generate infrastructure as if they were conquered
 
 ## Source Code
 
