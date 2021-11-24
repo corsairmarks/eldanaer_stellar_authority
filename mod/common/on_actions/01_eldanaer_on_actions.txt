@@ -13,7 +13,7 @@ on_single_player_save_game_load = {
 	}
 }
 
-# THIS = country
+# this = country
 on_game_start_country = {
 	events = {
 		eldanaer.1
@@ -23,8 +23,8 @@ on_game_start_country = {
 }
 
 # A leader leveled up.
-# THIS = Country
-# FROM = Leader
+# this = Country
+# from = Leader
 on_leader_level_up = {
 	events = {
 		eldanaer.30
@@ -32,8 +32,8 @@ on_leader_level_up = {
 	}
 }
 
-# THIS = planet that has been fired upon
-# FROM = fleet that fired
+# this = planet that has been fired upon
+# from = fleet that fired
 on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	events = {
 		crisis.5015 # Menace Objective - Destroy World/Empire
@@ -41,21 +41,21 @@ on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	}
 }
 
-# THIS = planet that will be fired upon
-# FROM = fleet that will fire
+# this = planet that will be fired upon
+# from = fleet that will fire
 on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL_queued = {
 	events = {
 	}
 }
 
-# THIS = planet that would have been fired upon
-# FROM = fleet would have fired
+# this = planet that would have been fired upon
+# from = fleet would have fired
 on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL_unqueued = {
 	events = {
 	}
 }
 
-# THIS = country
+# this = country
 on_decade_pulse_country = {
 	events = {
 		# force the AI player to use predetermined citizenship for the k'foori and zdremites
@@ -64,11 +64,27 @@ on_decade_pulse_country = {
 	}
 }
 
-# FROM = Country scope (new owner)
-# THIS = Planet scope
+# from = Country scope (new owner)
+# this = Planet scope
 on_planet_transfer = {
 	events = {
 		# force the AI player to use predetermined citizenship for the zdremites (this will fire whether conquered or acquired by necroids.6)
 		eldanaer.21
+	}
+}
+
+# fired before a primitive planet has changed ownership, before any GUI window is displayed
+# this = planet (before ownership change)
+# from = country, imminent owner
+on_primitive_planet_transferring = {
+	events = {
+	}
+}
+
+# fired after a primitive planet has changed ownership
+# this = planet (after ownership change)
+# from = country, primitive former owner
+on_primitive_planet_transferred = {
+	events = {
 	}
 }
