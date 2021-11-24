@@ -121,9 +121,9 @@ This mod can be safely added to your savegame after the game has started, but no
 
 I've made a few fix/enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 
-[Technician Job Priority Fix for Slaves](https://steamcommunity.com/workshop/filedetails/?id=2484702578) helps K'foori properly take technician jobs if you use any slavery type other than "Domestic Servitude." If you want the same fix but also want some rebalancing of the Prosperity traditions (because they were not updated as Pop counts were decreased) try [Prosperity Tradition Rebalance for 3.0.3](https://steamcommunity.com/sharedfiles/filedetails/?id=2497266630).
+[Technician Job Priority Fix for Slaves](https://steamcommunity.com/workshop/filedetails/?id=2484702578) helps K'foori properly take technician jobs if you use any slavery type other than "Domestic Servitude."
 
-[Primitive Conquest Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2488154830) helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
+[Primitive Conquest Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2488154830) ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
 
 [Full Military Service for Battle Thralls](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 
