@@ -63,7 +63,7 @@ eldanaer={
 		}
 	}
 	ruler={
-		gender=male
+		gender=indeterminable
 		name="PRESCRIPTED_ruler_name_eldanaer"
 		portrait="fun7"
 		texture=3
