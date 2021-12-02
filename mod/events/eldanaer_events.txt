@@ -63,13 +63,13 @@ country_event = {
 						gender = indeterminable
 						homeworld = this
 						traits = {
+							trait = "trait_pc_tropical_preference"
 							trait = "trait_lithoid"
+							trait = "trait_high_gravity_evolution"
 							trait = "trait_very_strong"
 							trait = "trait_resilient"
 							trait = "trait_slow_learners"
 							trait = "trait_sedentary"
-							trait = "trait_pc_tropical_preference"
-							trait = "trait_high_gravity_evolution"
 						}
 					}
 					last_created_species = {
