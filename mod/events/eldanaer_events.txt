@@ -565,7 +565,7 @@ planet_event = {
 			limit = {
 				exists = owner
 				owner = {
-					NOT = { is_same_value = from.owner }
+					NOT = { is_country = from.owner }
 					OR = {
 						is_country_type = default
 						is_country_type = fallen_empire
@@ -582,8 +582,8 @@ planet_event = {
 			every_country = {
 				limit = {
 					NOR = {
-						is_same_value = from.owner
-						is_same_value = root.owner
+						is_country = from.owner
+						is_country = root.owner
 						has_origin = origin_necrophage
 						AND = {
 							has_federation = yes
@@ -639,7 +639,7 @@ planet_event = {
 			every_country = {
 				limit = {
 					NOR = {
-						is_same_value = from.owner
+						is_country = from.owner
 						has_origin = origin_necrophage
 					}
 					OR = {
@@ -661,7 +661,7 @@ planet_event = {
 			every_country = {
 				limit = {
 					NOR = {
-						is_same_value = from.owner
+						is_country = from.owner
 						has_origin = origin_necrophage
 					}
 					OR = {
@@ -699,7 +699,7 @@ planet_event = {
 			limit = {
 				OR = {
 					NOT = { exists = owner }
-					owner = { NOT = { is_same_value = from.owner } }
+					owner = { NOT = { is_country = from.owner } }
 				}
 			}
 			if = {
@@ -835,7 +835,7 @@ planet_event = {
 		# if the planet changed ownership...
 		if = {
 			limit = {
-				owner = { NOT = { is_same_value = event_target:former_owner } }
+				owner = { NOT = { is_country = event_target:former_owner } }
 				any_owned_species = { species_has_happiness_with_owner = prev.owner }
 			}
 			# if it was originally our colony, our species pops are happy to be liberated
