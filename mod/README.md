@@ -97,9 +97,13 @@ The species bios included here are not visible in-game other than the main empir
 >
 > Their natural strength and steadfast attitude inevitably earns the trust and respect of the Eldanær. Following a brief first contact/annexation war, the Zdremites integrate with the Eldanær and are entrusted as honored protectors from other, dangerous xeno influences.
 
+### Special Bonus for Scripted Empire
+
+If you play the Eldanær Stellar Authority with both of its species (Eldanær and K'foori) exactly as they are pre-scripted, you will receive a small bonus.  At game start, the Eldanær will also receive Natural Sociologists to use their unspent trait point, while the K'foori will have Strong replaced with Serviles as well as having Unruly replaced by Slow Learners and Deviants to more accurately reflect their lore.
+
 # Custom Scripting
 
-There is a new diplomatic personality, the Cautious Autocrats, that I reweighted slightly to try and represent the Eldanær Stellar Authority. Unfortunately I can't find a way to get them to prefer opening embassies with other species. There are events to try and prompt the AI to set the preferred slavery types on the K'foori and Zdremites, but the AI seems to be able to change slavery policies even if they are on cooldown.
+There is a new diplomatic personality, the Cautious Autocrats, that I re-weighted slightly to try and represent the Eldanær Stellar Authority. Unfortunately I can't find a way to get them to prefer opening embassies with other species. There are events to try and prompt the AI to set the preferred slavery types on the K'foori and Zdremites, but the AI seems to be able to change slavery policies even if they are on cooldown.
 
 The bulk of the scripting is to support game setup and the new Colossus weapon. Have fun necrophaging entire worlds!
 

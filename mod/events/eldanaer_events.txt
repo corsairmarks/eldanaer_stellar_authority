@@ -334,6 +334,65 @@ event = {
 	}
 }
 
+# triggered by empire_init_capital_planet
+# this = planet
+# from = species, founder
+planet_event = {
+	id = eldanaer.4
+	is_triggered_only = yes
+	hide_window = yes
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = {
+		owner = {
+			has_country_flag = is_eldanaer_stellar_authority
+			has_origin = origin_necrophage
+			owner_main_species = {
+				species_portrait = "fun7"
+				has_trait = trait_necrophage
+				has_trait = trait_traditional
+				has_trait = trait_charismatic
+				has_trait = trait_enduring
+				has_trait = trait_slow_breeders
+				has_trait = trait_decadent
+			}
+			is_regular_empire = yes
+		}
+	}
+	immediate = {
+		owner_main_species = {
+			change_species_characteristics = {
+				add_trait = trait_natural_sociologists
+			}
+		}
+		last_created_species = {
+			if = {
+				limit = {
+					species_portrait = "pla7"
+					has_trait = trait_ingenious
+					has_trait = trait_plantoid_budding
+					has_trait = trait_strong
+					has_trait = trait_unruly
+					has_trait = trait_fleeting
+				}
+				# three blocks otherwise it won't add/remove all the traits
+				change_species_characteristics = {
+					remove_trait = trait_strong
+					add_trait = trait_syncretic_proles
+				}
+				change_species_characteristics = {
+					remove_trait = trait_unruly
+					add_trait = trait_slow_learners
+				}
+				change_species_characteristics = {
+					add_trait = trait_deviants
+				}
+			}
+		}
+	}
+}
+
 country_event = {
 	id = eldanaer.10
 	hide_window = yes
