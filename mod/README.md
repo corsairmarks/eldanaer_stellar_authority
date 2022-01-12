@@ -72,7 +72,7 @@ The species bios included here are not visible in-game other than the main empir
 * **Namelist:** Plantoid 4
 * **Traits:**
     * Ingenious
-    * Rapid Breeders
+    * Budding
     * Strong
     * Unruly
     * Fleeting
