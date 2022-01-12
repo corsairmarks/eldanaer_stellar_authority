@@ -44,7 +44,6 @@ Because [b]gov_bureaucratic_autocracy[/b] is not a built-in type of government, 
 [14:43:11][effect_impl.cpp:18754]: Bureaucratic Autocracy is missing an option in pirate.1, using fallback option instead at file: events/pirate_events.txt line: 215
 [/code]
 [h1]Changelog[/h1]
-
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2496360535]Change Notes[/url]
 
 [h2]Source Code[/h2]
