@@ -1,5 +1,4 @@
 [h1]Overview[/h1]
-
 Do you like to play or fight empires with a backstory? Or maybe you want to have a pre-made empire to bring to your next role-play game? Then this mod is for you! I enjoyed coming up with a backstory for this empire, and I thought that I'd publish it for others to enjoy as well.
 
 Oh, and this mod is also for you if you want a new Colossus weapon - the Necrophagic Spore Diffuser! This weapon can become available for fungoid necrophage empires to research [i]after[/i] they have completed the Colossus project. It is based on the Nanobot Diffuser (and reuses the same graphical effects).
@@ -7,33 +6,27 @@ Oh, and this mod is also for you if you want a new Colossus weapon - the Necroph
 The weapon effects are slightly different: all biological Pops are converted to the main necrophage species of the firing empire (normally the Eldanær but the weapon can be researched by any fungoid necrophage) and robot Pops are "conquered" by the necrophaged Pops, which causes devastation based on the percentage of robot Pops that were present. Because the weapon cannot forcibly convert robot Pops, it can only be fired on hostile planets that have more than half of the Pops eligible to be necrophaged (or are already the appropriate necrophage species). Similar to the Divine Enforcer, it can be used on your own planets to instantly convert any biological Pops into your necrophage fungoids (this does not cause devastation or unhappiness in robotic Pops - they are already in your empire).
 
 [h1]Details[/h1]
-
 The Eldanær Stellar Authority is a fanatic authoritarian, xenophobic empire ruled by a rigid and complex bureaucratic hierarchy. It has a custom imperial authority, the Bureaucratic Autocracy, which is the same as a regular imperial authority but the rulers do not use dynastic titles. The Eldanær are fungoid necrophages with a plantoid prepatent species, the K'foori. The Eldanær have a pre-scripted home system (Ræl) with named planets and the Lush modifier on their homeworld (Dærun), orbiting a ringed gas giant with an extensive moon system - it is also available for custom empires to select.
 
 This mod also includes a custom primitive species of lithoids (the Zdremites) that will replace one of the randomly generated primitives for the Eldanær Stellar Authority's necrophage origin - as long as the number of guaranteed habitable worlds is 1 or higher. The Zdremites are guaranteed to spawn on a high gravity world and dangerous wildlife with lithoid monoliths that can always be cleared into extra Zdremite Pops, but have fewer Pops to start with. Their High-G Evolution origin is available for you to play (although it is underwhelming as a stand-alone origin).
 
 [h2]Species Design[/h2]
-
 The species bios are not visible in-game other than the main empire-level description available on the empire selection screen. This is because the game cannot load localised text for [b]species_bio[/b] in either prescripted races or the [b]create_species[/b] effect, and also does not support escaped newline characters [b]\n[/b]. This is reported as a bug [url=https://forum.paradoxplaza.com/forum/threads/stellaris-v3-0-2-91c1-species_bio-for-prescripted-countries-or-for-the-create_species-effect-does-not-resolve-localisation-text-and-instead-show.1471611/]here[/url].
 
 For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].
 
 [h1]Compatibility[/h1]
-
 Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
 [h2]When to Install[/h2]
-
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
 [h2]Required Mod Dependencies[/h2]
-
 [url=https://steamcommunity.com/workshop/filedetails/?id=2496357128]Planetary Modifier Enhancements[/url] is used to apply the "Part of an Extensive Moon System" to the homeworld.
 
 [h2]Recommended Companion Mods[/h2]
-
 I've made a few fix/enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 
 [url=https://steamcommunity.com/workshop/filedetails/?id=2484702578]Technician Job Priority Fix for Slaves[/url] helps K'foori properly take technician jobs if you use any slavery type other than "Domestic Servitude."
@@ -43,19 +36,15 @@ I've made a few fix/enhancement mods that were inspired by things I found in the
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Full Military Service for Battle Thralls[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 
 [h1]Known Issues[/h1]
-
 Because [b]gov_bureaucratic_autocracy[/b] is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:
-
 [code]
 [14:43:11][effect_impl.cpp:18754]: Bureaucratic Autocracy is missing an option in pirate.1, using fallback option instead at file: events/pirate_events.txt line: 215
 [/code]
-
 [h1]Changelog[/h1]
 
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2496360535]Change Notes[/url]
 
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/eldanaer_stellar_authority]Github[/url]
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
