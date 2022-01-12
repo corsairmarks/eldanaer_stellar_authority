@@ -10,7 +10,10 @@ The Eldanær Stellar Authority is a fanatic authoritarian, xenophobic empire rul
 
 This mod also includes a custom primitive species of lithoids (the Zdremites) that will replace one of the randomly generated primitives for the Eldanær Stellar Authority's necrophage origin - as long as the number of guaranteed habitable worlds is 1 or higher. The Zdremites are guaranteed to spawn on a high gravity world and dangerous wildlife with lithoid monoliths that can always be cleared into extra Zdremite Pops, but have fewer Pops to start with. Their High-G Evolution origin is available for you to play (although it is underwhelming as a stand-alone origin).
 
-[h2]Species Design[/h2]
+[h2]Special Bonus for the Pre-Scripted Empire[/h2]
+If you play the Eldanær Stellar Authority with both of its species (Eldanær and K'foori) exactly as they are pre-scripted, you will receive a small bonus.  At game start, the Eldanær will also receive Natural Sociologists to use their unspent trait point, while the K'foori will have Strong replaced with Serviles as well as replacing Unruly with both Slow Learners and Deviants to more accurately reflect their lore.
+
+[h2]Species Lore[/h2]
 The species bios are not visible in-game other than the main empire-level description available on the empire selection screen. This is because the game cannot load localised text for [b]species_bio[/b] in either prescripted races or the [b]create_species[/b] effect, and also does not support escaped newline characters [b]\n[/b]. This is reported as a bug [url=https://forum.paradoxplaza.com/forum/threads/stellaris-v3-0-2-91c1-species_bio-for-prescripted-countries-or-for-the-create_species-effect-does-not-resolve-localisation-text-and-instead-show.1471611/]here[/url].
 
 For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].

@@ -97,9 +97,9 @@ The species bios included here are not visible in-game other than the main empir
 >
 > Their natural strength and steadfast attitude inevitably earns the trust and respect of the Eldanær. Following a brief first contact/annexation war, the Zdremites integrate with the Eldanær and are entrusted as honored protectors from other, dangerous xeno influences.
 
-### Special Bonus for Scripted Empire
+### Special Bonus for the Pre-Scripted Empire
 
-If you play the Eldanær Stellar Authority with both of its species (Eldanær and K'foori) exactly as they are pre-scripted, you will receive a small bonus.  At game start, the Eldanær will also receive Natural Sociologists to use their unspent trait point, while the K'foori will have Strong replaced with Serviles as well as having Unruly replaced by Slow Learners and Deviants to more accurately reflect their lore.
+If you play the Eldanær Stellar Authority with both of its species (Eldanær and K'foori) exactly as they are pre-scripted, you will receive a small bonus.  At game start, the Eldanær will also receive Natural Sociologists to use their unspent trait point, while the K'foori will have Strong replaced with Serviles as well as replacing Unruly with both Slow Learners and Deviants to more accurately reflect their lore.
 
 # Custom Scripting
 
@@ -173,6 +173,12 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Planet killer denies usage unless you have full native interference
     * Add interaction with [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684): primitive worlds necrophaged via the Necrophage Spore Diffuser will allow you to acquire its necrophaged leaders
     * Add interaction with [Primitive Conquest Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2488154830): primitive worlds necrophaged via the Necrophage Spore Diffuser will generate infrastructure as if they were conquered
+* 4.1.0 Pre-scripted species enhancements
+    * K'foori swap Rapid Breeders for Budding
+    * If playing the Eldanær Stellar Authority with both species as originally designed, they will be altered slightly:
+        * Eldanær gain Natural Sociologists (uses up previously unspent point)
+        * K'foori trade Strong for Serviles
+        * K'foori trade Unruly for Slow Learners and Deviants
 
 ## Source Code
 
