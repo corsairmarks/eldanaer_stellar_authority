@@ -10,6 +10,12 @@ esa_is_necrophage_empire = {
 	has_trait = trait_necrophage
 }
 
+# this = country
+is_eligible_pk_spore_dispersal = {
+	esa_is_necrophage_empire = yes
+	is_species_class = "FUN"
+}
+
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure

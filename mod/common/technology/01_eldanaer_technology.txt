@@ -17,8 +17,7 @@ tech_pk_spore_dispersal = {
 		host_has_dlc = "Apocalypse"
 		has_necroids = yes
 		has_country_flag = colossus_project
-		has_origin = origin_necrophage
-		owner_species = { is_species_class = "FUN" }
+		is_eligible_pk_spore_dispersal = yes
 	}
 	weight_modifier = {
 		factor = 0.50
@@ -56,8 +55,7 @@ tech_pk_spore_dispersal = {
 		factor = 0.25
 		modifier = {
 			factor = 5.0
-			has_origin = origin_necrophage
-			owner_species = { is_species_class = "FUN" }
+			is_eligible_pk_spore_dispersal = yes
 		}
 	}
 }
