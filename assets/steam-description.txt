@@ -19,7 +19,7 @@ The species bios are not visible in-game other than the main empire-level descri
 For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].
 
 [h1]Compatibility[/h1]
-Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3.* "Libra."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
