@@ -832,13 +832,12 @@ planet_event = {
 				limit = {
 					has_communications = root.owner
 					is_gestalt = no
+					is_death_cult_empire = no
 					NOR = {
 						is_country = root.owner
 						is_same_species = prev
 						has_ai_personality_behaviour = purger
 						has_origin = origin_necrophage
-						has_valid_civic = civic_death_cult
-						has_valid_civic = civic_death_cult_corporate
 					}
 					OR = {
 						is_country_type = default

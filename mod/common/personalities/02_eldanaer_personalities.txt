@@ -62,7 +62,7 @@ cautious_autocrats = {
 	weight_modifier = {
 		weight = 0
 		modifier = {
-			weight = 1000
+			add = 1000
 			has_country_flag = is_eldanaer_stellar_authority
 		}
 	}
