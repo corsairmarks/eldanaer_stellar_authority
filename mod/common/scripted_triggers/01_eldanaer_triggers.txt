@@ -78,7 +78,6 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 				pop_percentage = {
 					percentage >= 0.5
 					limit = {
-						is_robot_pop = no
 						is_sapient = yes
 						# assumes that species of the same type as the attacker are compelled to revolt - so they count towards the minimum
 						species = { species_has_happiness_with_owner = FROM.owner }
