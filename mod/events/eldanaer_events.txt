@@ -21,7 +21,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_country_flag = is_eldanaer_stellar_authority
-		has_origin = origin_necrophage
+		esa_is_necrophage_empire = yes
 	}
 	immediate = {
 		# Find the randomized necroids.4 primitives and replace with prescripted primitives.
@@ -231,7 +231,7 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_country_flag = is_eldanaer_stellar_authority
-		has_origin = origin_necrophage
+		esa_is_necrophage_empire = yes
 		is_regular_empire = yes
 	}
 	immediate = {
@@ -400,7 +400,7 @@ country_event = {
 	trigger = {
 		is_ai = yes
 		has_country_flag = is_eldanaer_stellar_authority
-		has_origin = origin_necrophage
+		esa_is_necrophage_empire = yes
 		is_regular_empire = yes
 	}
 	immediate = {
@@ -442,7 +442,7 @@ country_event = {
 	trigger = {
 		is_ai = yes
 		has_country_flag = is_eldanaer_stellar_authority
-		has_origin = origin_necrophage
+		esa_is_necrophage_empire = yes
 		is_regular_empire = yes
 	}
 	immediate = {
@@ -509,7 +509,7 @@ planet_event = {
 		from = {
 			is_ai = yes
 			has_country_flag = is_eldanaer_stellar_authority
-			has_origin = origin_necrophage
+			esa_is_necrophage_empire = yes
 			is_regular_empire = yes
 		}
 	}

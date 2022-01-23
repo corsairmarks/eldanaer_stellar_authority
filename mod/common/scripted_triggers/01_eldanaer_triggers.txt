@@ -4,6 +4,12 @@ has_eldanaer_prerequisites = {
 	has_lithoids = yes # zdremite: species class
 }
 
+# this = country
+esa_is_necrophage_empire = {
+	has_origin = origin_necrophage
+	has_trait = trait_necrophage
+}
+
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
