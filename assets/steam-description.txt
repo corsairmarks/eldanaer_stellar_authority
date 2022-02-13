@@ -36,7 +36,7 @@ I've made a few fix/enhancement mods that were inspired by things I found in the
 
 [url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Primitive Conquest Enhancements[/url] ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Full Military Service for Battle Thralls[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 
 [h1]Known Issues[/h1]
 Because [b]gov_bureaucratic_autocracy[/b] is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:

@@ -77,7 +77,7 @@ country_event = {
 						# will end up with "none" which displays as blank or the last selected species.
 						change_species_portrait = "lith8"
 						set_species_flag = zdremite_species@root
-						# flag from "Battle Thralls can be Military Leaders" to allow the Zdremites to be leaders
+						# flag from "Special Leadership Privileges for Battle Thralls and Bio-Trophies" to allow the Zdremites to be leaders
 						set_species_flag = allow_military_leaders_honored_protectors@root
 					}
 					create_country = {

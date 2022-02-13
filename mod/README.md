@@ -129,7 +129,7 @@ I've made a few fix/enhancement mods that were inspired by things I found in the
 
 [Primitive Conquest Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2488154830) ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
 
-[Full Military Service for Battle Thralls](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
+[Special Leadership Privileges for Battle Thralls and Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 
 # Known Issues
 
@@ -155,7 +155,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Update README
 * 2.2.1 Add "Technologies" tag because of the Colossus weapon, explicit mod dependency in description
 * 2.3.0 Add install flag for single-player game load
-* 2.3.1 Support new flag from Full Military Service for Battle Thralls
+* 2.3.1 Support new flag from Full Military Service for Battle Thralls (now known as Special Leadership Privileges for Battle Thralls and Bio-Trophies)
 * 2.3.2 Support new flag from Leader Traits: Enhanced Randomisation, fix High-G origin so starting Pops have the positive trait
 * 3.0.0 Mark as compatible with Stellaris version 3.1 "Lem"
     * Origin: High-G trait uses new triggered bonuses (similar to the changes to Void Dweller)
