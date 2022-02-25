@@ -123,7 +123,7 @@ This mod can be safely added to your savegame after the game has started, but no
 
 ## Recommended Companion Mods
 
-I've made a few fix/enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
+I've made a few enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 
 [Primitive Conquest Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2488154830) ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
 
