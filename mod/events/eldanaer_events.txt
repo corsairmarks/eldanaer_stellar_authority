@@ -45,6 +45,9 @@ country_event = {
 					if = {
 						limit = { is_colony = yes }
 						destroy_colony = yes
+						remove_all_armies = yes
+						remove_all_buildings = yes
+						remove_all_districts = yes
 					}
 					clear_planet_modifiers = yes
 					add_modifier = {
@@ -131,15 +134,34 @@ country_event = {
 					while = {
 						count = 4
 						add_deposit = d_hibernating_zdremites
-						random_owned_pop = {
-							kill_pop = yes
+						# Purge fallbacks - clean up highest-ranking unemployed pops first, then move down strata ending with random workers
+						if = {
+							limit = { any_owned_pop = { is_unemployed = yes } }
+							random_owned_pop = {
+								limit = { is_unemployed = yes }
+								kill_pop = yes
+							}
+						}
+						else_if = {
+							limit = { any_owned_pop = { has_job = peasant } }
+							random_owned_pop = {
+								limit = { has_job = peasant }
+								kill_pop = yes
+							}
+						}
+						else_if = {
+							limit = { any_owned_pop = { has_job = primitive_miner } }
+							random_owned_pop = {
+								limit = { has_job = peasant }
+								kill_pop = yes
+							}
+						}
+						else = {
+							random_owned_pop = {
+								kill_pop = yes
+							}
 						}
 					}
-					every_owned_pop = {
-						unemploy_pop = yes
-						clear_pop_category = yes
-					}
-					check_planet_employment = yes
 					# Make any random blockers have a more dangerous flavor.
 					while = {
 						limit = { has_deposit = d_mountain_range }
