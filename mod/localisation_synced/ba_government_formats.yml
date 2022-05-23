@@ -1,6 +1,0 @@
-﻿l_default:
- format.bureaucratic_autocracy.1: "<bureaucratic_autocracy> of [This.Capital.System.GetName]"
- format.bureaucratic_autocracy.2: "<bureaucratic_autocracy> of [This.Capital.GetName]"
- format.bureaucratic_autocracy.3: "[This.GetSpeciesName] <bureaucratic_autocracy>"
- format.bureaucratic_autocracy.4: "<bureaucratic_autocracy_desc> [This.GetSpeciesName] <bureaucratic_autocracy>"
- format.bureaucratic_autocracy.5: "[This.GetSpeciesName] <bureaucratic_autocracy_mid_desc> <bureaucratic_autocracy>"
