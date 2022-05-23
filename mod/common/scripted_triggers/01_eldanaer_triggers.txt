@@ -1,4 +1,5 @@
 has_eldanaer_prerequisites = {
+	optimize_memory
 	has_necroids = yes # eldanaer: origin, city graphical culture
 	has_plantoids = yes # k'foor: portrait
 	has_lithoids = yes # zdremite: species class
@@ -6,17 +7,20 @@ has_eldanaer_prerequisites = {
 
 # this = country
 esa_is_necrophage_empire = {
+	optimize_memory
 	has_origin = origin_necrophage
 	has_trait = trait_necrophage
 }
 
 # this = country
 is_eligible_pk_spore_dispersal = {
+	optimize_memory
 	esa_is_necrophage_empire = yes
 	is_species_class = "FUN"
 }
 
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
+	optimize_memory
 	custom_tooltip = {
 		fail_text = is_not_a_habitable_planet_or_megastructure
 		# intentionally omits crisis planet types (pc_ai, pc_infested) because Pops can't live there
