@@ -131,25 +131,8 @@ country_event = {
 					while = {
 						count = 4
 						add_deposit = d_hibernating_zdremites
-						# Purge fallbacks - clean up highest-ranking unemployed pops first, then move down strata ending with random workers
-						if = {
-							limit = { any_owned_pop = { is_unemployed = yes } }
-							random_owned_pop = {
-								limit = { is_unemployed = yes }
-								kill_pop = yes
-							}
-						}
-						else_if = {
-							limit = { any_owned_pop = { has_job = peasant } }
-							random_owned_pop = {
-								limit = { has_job = peasant }
-								kill_pop = yes
-							}
-						}
-						else = {
-							random_owned_pop = {
-								kill_pop = yes
-							}
+						random_owned_pop = {
+							kill_pop = yes
 						}
 					}
 					every_owned_pop = {
