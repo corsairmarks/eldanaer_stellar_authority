@@ -1,5 +1,5 @@
 eldanaer={
-	name="eldanaer"
+	name="EMPIRE_DESIGN_eldanaer"
 	ship_prefix="PRESCRIPTED_esa_ship_prefix"
 	spawn_enabled=yes
 	playable=has_eldanaer_prerequisites
