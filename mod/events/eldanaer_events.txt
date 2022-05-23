@@ -152,7 +152,7 @@ country_event = {
 						else_if = {
 							limit = { any_owned_pop = { has_job = primitive_miner } }
 							random_owned_pop = {
-								limit = { has_job = peasant }
+								limit = { has_job = primitive_miner }
 								kill_pop = yes
 							}
 						}
