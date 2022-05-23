@@ -4,16 +4,16 @@
 empire_name_parts_list = {
 	key = "bureaucratic_autocracy"
 	parts = {
-		"Autocracy" = 3
-		"Bureaucracy" = 3
-		"Bureau" = 3
-		"Ministry" = 3
-		"Administration" = 1
-		"Authority" = 2
-		"Hierarchy" = 2
-		"Sovereignty" = 2
-		"State" = 1
-		"Nation" = 1
+		Autocracy = 3
+		NAME_PART_Bureaucracy = 3
+		NAME_PART_Bureau = 3
+		NAME_PART_Ministry = 3
+		Administration = 1
+		Authority = 2
+		Hierarchy = 2
+		Sovereignty = 2
+		State = 1
+		Nation = 1
 	}
 }
 
@@ -21,11 +21,11 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "bureaucratic_autocracy_desc"
 	parts = {
-		"Interstellar" = 1
-		"Codified" = 2
-		"Magisterial" = 2
-		"Bureaucratic" = 2
-		"Regulatory" = 2
+		Interstellar = 1
+		NAME_PART_Codified = 2
+		NAME_PART_Magisterial = 2
+		NAME_PART_Bureaucratic = 2
+		NAME_PART_Regulatory = 2
 	}
 }
 
@@ -33,15 +33,15 @@ empire_name_parts_list = {
 empire_name_parts_list = {
 	key = "bureaucratic_autocracy_mid_desc"
 	parts = {
-		"Interstellar" = 1
-		"Interplanetary" = 1
-		"Galactic" = 1
-		"Star" = 1
-		"Stellar" = 3
-		"Codified" = 2
-		"Magisterial" = 2
-		"Bureaucratic" = 2
-		"Regulatory" = 2
+		Interstellar = 1
+		Interplanetary = 1
+		Galactic = 1
+		Star = 1
+		Stellar = 3
+		NAME_PART_Codified = 2
+		NAME_PART_Magisterial = 2
+		NAME_PART_Bureaucratic = 2
+		NAME_PART_Regulatory = 2
 	}
 }
 
@@ -51,16 +51,17 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_bureaucratic_autocracy"
+			has_government = gov_bureaucratic_autocracy
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.bureaucratic_autocracy.1"
-	noun = "[This.Capital.System.GetName]"
-	prefix_format = "[This.Capital.System.GetName] <bureaucratic_autocracy>"
+	lookups = "[This.Capital.System.GetName] <bureaucratic_autocracy>"
+	format = format.bureaucratic_autocracy.1 # <bureaucratic_autocracy> of [This.Capital.System.GetName]
+	noun = format.home_system # [This.Capital.System.GetName]
+	prefix_format = format_prefix.bureaucratic_autocracy.1 # [This.Capital.System.GetName] <bureaucratic_autocracy>
 }
 
 # Bureaucratic Autocracy 2
@@ -76,9 +77,10 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.bureaucratic_autocracy.2"
-	noun = "[This.Capital.GetName]"
-	prefix_format = "[This.Capital.GetName] <bureaucratic_autocracy>"
+	lookups = "[This.Capital.GetName] <bureaucratic_autocracy>"
+	format = format.bureaucratic_autocracy.2 # <bureaucratic_autocracy> of [This.Capital.GetName]
+	noun = format.homeworld # [This.Capital.GetName]
+	prefix_format = format_prefix.bureaucratic_autocracy.2: # [This.Capital.GetName] <bureaucratic_autocracy>
 }
 
 # Bureaucratic Autocracy 3
@@ -87,16 +89,17 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = "gov_bureaucratic_autocracy"
+			has_government = gov_bureaucratic_autocracy
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.bureaucratic_autocracy.3"
-	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <bureaucratic_autocracy>"
+	lookups = "[This.GetSpeciesName] <bureaucratic_autocracy>"
+	format = format.bureaucratic_autocracy.3 # [This.GetSpeciesName] <bureaucratic_autocracy>
+	noun = format.species # [This.GetSpeciesName]
+	prefix_format = format_prefix.bureaucratic_autocracy.3 # [This.GetSpeciesName] <bureaucratic_autocracy>
 }
 
 # Bureaucratic Autocracy 4
@@ -105,16 +108,17 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_bureaucratic_autocracy"
+			has_government = gov_bureaucratic_autocracy
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.bureaucratic_autocracy.4"
-	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <bureaucratic_autocracy>"
+	lookups = "<bureaucratic_autocracy_desc> [This.GetSpeciesName] <bureaucratic_autocracy>"
+	format = format.bureaucratic_autocracy.4 # <bureaucratic_autocracy_desc> [This.GetSpeciesName] <bureaucratic_autocracy>
+	noun = format.species # [This.GetSpeciesName]
+	prefix_format = format_prefix.bureaucratic_autocracy.3 # [This.GetSpeciesName] <bureaucratic_autocracy>
 }
 
 # Bureaucratic Autocracy 5
@@ -123,14 +127,15 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = "gov_bureaucratic_autocracy"
+			has_government = gov_bureaucratic_autocracy
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "format.bureaucratic_autocracy.5"
-	noun = "[This.GetSpeciesName]"
-	prefix_format = "[This.GetSpeciesName] <bureaucratic_autocracy>"
+	lookups = "[This.GetSpeciesName] <bureaucratic_autocracy_mid_desc> <bureaucratic_autocracy>"
+	format = format.bureaucratic_autocracy.5 # [This.GetSpeciesName] <bureaucratic_autocracy_mid_desc> <bureaucratic_autocracy>
+	noun = format.species # [This.GetSpeciesName]
+	prefix_format = format_prefix.bureaucratic_autocracy.3 # [This.GetSpeciesName] <bureaucratic_autocracy>
 }
