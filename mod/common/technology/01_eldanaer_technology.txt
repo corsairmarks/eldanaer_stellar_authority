@@ -50,6 +50,10 @@ tech_pk_spore_dispersal = {
 				}
 			}			
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 	ai_weight = {
 		factor = 0.25
