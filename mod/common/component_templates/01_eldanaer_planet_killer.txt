@@ -3,15 +3,6 @@ weapon_component_template = { # Necrophagic Spore Dispersal
 	size = planet_killer
 	type = planet_killer
 	use_ship_kill_target = no
-	power = -7500
-	windup = {
-		min = 90
-		max = 0
-	}
-	total_fire_time = 30
-	accuracy = 1
-	range = 0
-	tracking = 0
 	prerequisites = { "tech_pk_spore_dispersal" }
 	icon = GFX_ship_part_nanobot_diffuser
 	icon_frame = 1
@@ -21,7 +12,7 @@ weapon_component_template = { # Necrophagic Spore Dispersal
 	ai_weight = {
 		weight = 0
 		modifier = {
-			weight = 500
+			weight = 50
 			is_eligible_pk_spore_dispersal = yes
 		}
 		modifier = {
