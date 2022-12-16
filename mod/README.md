@@ -109,7 +109,7 @@ The bulk of the scripting is to support game setup and the new Colossus weapon. 
 
 ## Compatibility
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
@@ -179,6 +179,9 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
         * K'foori trade Unruly for Slow Learners and Deviants
 * 5.0.0 Update for Stellaris version 3.3 "Libra" - integrate new Stellaris features; no functionality changes
 * 6.0.0 Update for Stellaris version 3.4 "Cepheus" - integrate new Stellaris features; no functionality changes
+* 7.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
+    * Integrate underlying game changes (notably random empire names)
+    * Necrophagic Spore Dispersal technology is easier to draw if you have the Javorian Pox Sample
 
 ## Source Code
 
