@@ -72,19 +72,3 @@ on_planet_transfer = {
 		eldanaer.21
 	}
 }
-
-# fired before a primitive planet has changed ownership, before any GUI window is displayed
-# this = planet (before ownership change)
-# from = country, imminent owner
-on_primitive_planet_transferring = {
-	events = {
-	}
-}
-
-# fired after a primitive planet has changed ownership
-# this = planet (after ownership change)
-# from = country, primitive former owner
-on_primitive_planet_transferred = {
-	events = {
-	}
-}

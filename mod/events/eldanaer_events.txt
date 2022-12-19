@@ -766,30 +766,7 @@ planet_event = {
 					owner = { NOT = { is_country = from.owner } }
 				}
 			}
-			if = {
-				limit = { owner = { is_country_type = primitive } }
-				owner = {
-					set_country_flag = colossus_transfer@prev
-					set_country_flag = orbitally_necrophaged@prev 
-					save_event_target_as = primitive_country
-				}
-				fire_on_action = {
-					on_action = on_primitive_planet_transferring
-					scopes = {
-						from = from.owner
-					}
-				}
-				set_owner = from.owner
-				fire_on_action = {
-					on_action = on_primitive_planet_transferred
-					scopes = {
-						from = event_target:primitive_country
-					}
-				}
-			}
-			else = {
-				set_owner = from.owner
-			}
+			set_owner = from.owner
 		}
 		every_owned_pop = {
 			limit = {

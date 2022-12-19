@@ -182,6 +182,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
 * 7.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
     * Integrate underlying game changes (notably random empire names)
     * Necrophagic Spore Dispersal technology is easier to draw if you have the Javorian Pox Sample
+* 7.1.0 Remove no-longer-necessary custom on_actions `on_primitive_planet_transferring` and `on_primitive_planet_transferred`
 
 ## Source Code
 
