@@ -1,4 +1,4 @@
-# THIS = country
+# this = country
 on_game_start_country = {
 	events = {
 		origin_high_gravity_evolution.2

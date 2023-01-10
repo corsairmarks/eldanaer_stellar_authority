@@ -9,16 +9,16 @@ d_hibernating_zdremites = {
 		if = {
 			limit = {
 				any_owned_pop = {
-					species = { home_planet = { is_planet = PREVPREVPREV } }
+					species = { home_planet = { is_planet = prevprevprev } }
 					is_lithoid = yes
 				}
 			}
 			random_owned_pop = {
 				limit = {
-					species = { home_planet = { is_planet = PREVPREVPREV } }
+					species = { home_planet = { is_planet = prevprevprev } }
 					is_lithoid = yes
 				}
-				ROOT = { create_pop = { species = PREV } }
+				root = { create_pop = { species = prev } }
 			}
 		}
 		else = {
@@ -32,7 +32,7 @@ d_hibernating_zdremites = {
 				planet = {
 					NOT = {
 						any_owned_pop = {
-							species = { home_planet = { is_planet = PREVPREVPREV } }
+							species = { home_planet = { is_planet = prevprevprev } }
 							is_lithoid = yes
 						}
 					}
@@ -44,7 +44,7 @@ d_hibernating_zdremites = {
 			trigger = {
 				planet = {
 					any_owned_pop = {
-						species = { home_planet = { is_planet = PREVPREVPREV } }
+						species = { home_planet = { is_planet = prevprevprev } }
 						is_lithoid = yes
 					}
 				}

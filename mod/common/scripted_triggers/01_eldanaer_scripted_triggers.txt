@@ -30,7 +30,7 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			is_planet_class = pc_nuked
 			AND = {
 				# pc_hive is only allowed for hive empires
-				FROM.owner = { is_hive_empire = yes }
+				from.owner = { is_hive_empire = yes }
 				is_planet_class = pc_hive
 			}
 			habitable_structure = yes
@@ -63,27 +63,27 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			custom_tooltip = {
 				fail_text = primitives_not_in_borders
 				exists = space_owner
-				space_owner = { is_country = FROM.owner }
+				space_owner = { is_country = from.owner }
 			}
 			# must have an appropriate primitive interference policy
 			custom_tooltip = {
 				fail_text = primitives_not_full_interference
-				FROM.owner = {
+				from.owner = {
 					has_policy_flag = interference_full
 				}
 			}
 		}
 		# planets owned by the attacker are targetable if they have any pops that can be necrophaged
 		else_if = {
-			limit = { is_owned_by = FROM.owner }
+			limit = { is_owned_by = from.owner }
 			custom_tooltip = {
 				fail_text = no_necrophagable_pops
 				any_owned_pop = {
 					# similar logic as species_can_be_necrophaged (common\scripted_triggers\00_scripted_triggers.txt)
 					is_robot_pop = no
 					is_sapient = yes
-					NOT = { is_same_species = FROM.owner_species }
-					species = { species_has_happiness_with_owner = FROM.owner }
+					NOT = { is_same_species = from.owner_species }
+					species = { species_has_happiness_with_owner = from.owner }
 				}
 			}
 		}
@@ -96,7 +96,7 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 					limit = {
 						is_sapient = yes
 						# assumes that species of the same type as the attacker are compelled to revolt - so they count towards the minimum
-						species = { species_has_happiness_with_owner = FROM.owner }
+						species = { species_has_happiness_with_owner = from.owner }
 					}
 					exclude = {
 						is_robot_pop = no
