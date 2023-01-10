@@ -1,15 +1,7 @@
 # fires when the game starts
 on_game_start = {
 	events = {
-		eldanaer.13 # flag mod as installed
 		eldanaer.3
-	}
-}
-
-# fired when loading a single-player game
-on_single_player_save_game_load = {
-	events = {
-		eldanaer.13 # flag mod as installed
 	}
 }
 

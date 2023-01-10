@@ -1,18 +1,5 @@
 namespace = eldanaer
 
-# flag mod as active
-event = {
-	id = eldanaer.13
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_global_flag = eldanaer_stellar_authority_installed }
-	}
-	immediate = {
-		set_global_flag = eldanaer_stellar_authority_installed
-	}
-}
-
 # Based on necroids.4 from events/necroids_events_1.txt, the purpose of this event is to replace the random primitives
 # with custom primitives for the Eldanaer Stellar Authority.  Currently only the T1 colony is a custom species.
 country_event = {
