@@ -183,6 +183,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Integrate underlying game changes (notably random empire names)
     * Necrophagic Spore Dispersal technology is easier to draw if you have the Javorian Pox Sample
 * 7.1.0 Remove no-longer-necessary custom on_actions `on_primitive_planet_transferring` and `on_primitive_planet_transferred`
+* 8.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
 
 ## Source Code
 

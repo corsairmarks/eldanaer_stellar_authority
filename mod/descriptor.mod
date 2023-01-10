@@ -8,7 +8,7 @@ tags={
 	"Species"
 	"Technologies"
 }
-version="7.1.0"
+version="8.0.0"
 picture="thumbnail.png"
 supported_version="3.6.*"
 remote_file_id="2496360535"
