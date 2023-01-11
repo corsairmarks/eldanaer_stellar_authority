@@ -18,25 +18,29 @@ The species bios are not visible in-game other than the main empire-level descri
 
 For more information on the species design and their species bios, please see the README.md file in the root directory of this mod. Instructions on how to locate the folder where your mods are installed is available [url=https://stellaris.paradoxwikis.com/Modding#Mod_management]here[/url].
 
-[h1]Compatibility[/h1]
+[h1]Changes[/h1]
+There is a new diplomatic personality, the Cautious Autocrats, that I re-weighted slightly to try and represent the Eldanær Stellar Authority. Unfortunately I can't find a way to get them to prefer opening embassies with other species. There are events to try and prompt the AI to set the preferred slavery types on the K'foori and Zdremites, but the AI seems to be able to change slavery policies even if they are on cooldown.
+
+The bulk of the scripting is to support game setup and the new Colossus weapon. Have fun necrophaging entire worlds!
+
+[h2]Compatibility[/h2]
 Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
-[h2]When to Install[/h2]
+[h3]When to Install[/h3]
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
-[h2]Required Mod Dependencies[/h2]
+[h3]Required Mod Dependencies[/h3]
 [url=https://steamcommunity.com/workshop/filedetails/?id=2496357128]Planetary Modifier Enhancements[/url] is used to apply the "Part of an Extensive Moon System" to the homeworld.
 
-[h2]Recommended Companion Mods[/h2]
+[h3]Recommended Companion Mods[/h3]
 I've made a few enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
-
-[url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Primitive Conquest Enhancements[/url] ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
-
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
-
-[h1]Known Issues[/h1]
+[list]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Primitive Conquest Enhancements[/url] ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
+[/list]
+[h2]Known Issues[/h2]
 Because [b]gov_bureaucratic_autocracy[/b] is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:
 [code]
 [14:43:11][effect_impl.cpp:18754]: Bureaucratic Autocracy is missing an option in pirate.1, using fallback option instead at file: events/pirate_events.txt line: 215

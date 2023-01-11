@@ -101,7 +101,7 @@ The species bios included here are not visible in-game other than the main empir
 
 If you play the Eldanær Stellar Authority with both of its species (Eldanær and K'foori) exactly as they are pre-scripted, you will receive a small bonus.  At game start, the Eldanær will also receive Natural Sociologists to use their unspent trait point, while the K'foori will have Strong replaced with Serviles as well as replacing Unruly with both Slow Learners and Deviants to more accurately reflect their lore.
 
-# Custom Scripting
+# Changes
 
 There is a new diplomatic personality, the Cautious Autocrats, that I re-weighted slightly to try and represent the Eldanær Stellar Authority. Unfortunately I can't find a way to get them to prefer opening embassies with other species. There are events to try and prompt the AI to set the preferred slavery types on the K'foori and Zdremites, but the AI seems to be able to change slavery policies even if they are on cooldown.
 
@@ -113,15 +113,15 @@ Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
-## When to Install
+### When to Install
 
 This mod can be safely added to your savegame after the game has started, but not removed.  This mod adds a technology, associated ship components, an origin, a species trait, and other types of object to the game.  All of these things will alter your savegame.
 
-## Required Mod Dependencies
+### Required Mod Dependencies
 
 [Planetary Modifier Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2496357128) is used to apply the "Part of an Extensive Moon System" to the homeworld.
 
-## Recommended Companion Mods
+### Recommended Companion Mods
 
 I've made a few enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 
@@ -129,13 +129,13 @@ I've made a few enhancement mods that were inspired by things I found in the cod
 
 [Special Leadership Privileges for Battle Thralls and Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 
-# Known Issues
+## Known Issues
 
 Because `gov_bureaucratic_autocracy` is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:
 
 `[14:43:11][effect_impl.cpp:18754]: Bureaucratic Autocracy is missing an option in pirate.1, using fallback option instead at file: events/pirate_events.txt line: 215`
 
-# Changelog
+## Changelog
 
 * 1.0.0 Initial version
 * 2.0.0 Support Planetary Modifier Enhancements new version
