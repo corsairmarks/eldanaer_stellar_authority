@@ -61,6 +61,15 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			}
 		}
 	}
+	custom_tooltip = {
+		fail_text = fotd_cant_collossus
+		exists = from
+		from = {
+			exists = owner
+			prev = { NOT = { has_planet_flag = fotd_seperatist_planet@from.owner } }
+			NOT = { has_country_flag = fotd_seperatist_country@owner }
+		}
+	}
 	if = {
 		limit = { exists = owner }
 		# primitive planet must be within borders
@@ -75,7 +84,7 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			custom_tooltip = {
 				fail_text = primitives_not_full_interference
 				from.owner = {
-					has_policy_flag = interference_full
+					has_policy_flag = interference_aggressive
 				}
 			}
 		}

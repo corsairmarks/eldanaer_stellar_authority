@@ -37,9 +37,7 @@ country_event = {
 						remove_all_districts = yes
 					}
 					clear_planet_modifiers = yes
-					add_modifier = {
-						modifier = "dangerous_wildlife"
-					}
+					add_modifier = { modifier = "dangerous_wildlife" }
 					set_planet_flag = zdremite_homeworld@root
 					create_species = {
 						name = "PRESCRIPTED_species_name_zdremite"
@@ -85,8 +83,8 @@ country_event = {
 						}
 						flag = {
 							icon = {
-								category = "special"
-								file = "primitive.dds"
+								category = "pre_ftl"
+								file = "preftl_steam_age.dds"
 							}
 							background = {
 								category = "backgrounds"
@@ -101,22 +99,27 @@ country_event = {
 						}
 						origin = "origin_high_gravity_evolution"
 						type = primitive
-					}
-					last_created_country = {
-						country_event = { id = origin_high_gravity_evolution.2 }
-						set_graphical_culture = preindustrial_01
-						set_country_flag = steam_age
-						set_primitive_age = steam_age
-						set_adjective = "PRESCRIPTED_adjective_zdremite"
-						# Don't allow the Zdremites to advance quickly - this flag is used by the
-						# primitive age increment events in events\primitive_events.txt to gatekeep
-						# advancement (although most of them use 2160 days/6 years).
-						set_timed_country_flag = {
-							flag = recently_advanced
-							years = 25
+						effect = {
+							set_graphical_culture = preindustrial_01
+							set_country_flag = steam_age
+							set_pre_ftl_age = steam_age
+							set_adjective = "PRESCRIPTED_adjective_zdremite"
+							# Don't allow the Zdremites to advance quickly - this flag is used by the
+							# primitive age increment events in events\primitive_events.txt to gatekeep
+							# advancement (although most of them use 2160 days/6 years).
+							set_timed_country_flag = {
+								flag = recently_advanced
+								years = 25
+							}
 						}
 					}
-					setup_primitive_planet = yes
+					last_created_country = {
+						country_event = {
+							id = origin_high_gravity_evolution.2
+						}
+					}
+					setup_pre_ftl_planet = yes
+					pre_ftl_clean_up_effect = yes
 					# Add hibernating Zdremites blockers, but kill off an equal number of the primitive pops to compensate.
 					while = {
 						count = 4
@@ -199,7 +202,7 @@ country_event = {
 			#			is_colony = no
 			#			has_planet_flag = prescripted_ideal
 			#		}
-			#		generate_very_early_primitives_on_planet = yes
+			#		generate_very_early_pre_ftls_on_planet = yes
 			#		set_name = random
 			#		change_colony_foundation_date = -1275
 			#		while = {
@@ -333,9 +336,7 @@ planet_event = {
 	id = eldanaer.4
 	is_triggered_only = yes
 	hide_window = yes
-	pre_triggers = {
-		has_owner = yes
-	}
+	pre_triggers = { has_owner = yes }
 	trigger = {
 		owner = {
 			has_country_flag = is_eldanaer_stellar_authority
