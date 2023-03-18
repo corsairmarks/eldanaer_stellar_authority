@@ -6,6 +6,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_origin = origin_high_gravity_evolution
+		exists = capital_scope
 	}
 	immediate = {
 		capital_scope = {
