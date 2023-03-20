@@ -53,10 +53,11 @@ d_hibernating_zdremites = {
 		}
 	}
 	ai_weight = {
-		weight = 1
+		weight = 2
 		modifier = {
 			factor = 2
 			from = {
+				num_unemployed <= 0
 				is_homeworld = yes
 			}
 		}
