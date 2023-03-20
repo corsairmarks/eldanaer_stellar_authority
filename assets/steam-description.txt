@@ -24,7 +24,7 @@ There is a new diplomatic personality, the Cautious Autocrats, that I re-weighte
 The bulk of the scripting is to support game setup and the new Colossus weapon. Have fun necrophaging entire worlds!
 
 [h2]Compatibility[/h2]
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
@@ -37,7 +37,12 @@ This mod can be safely added to your savegame after the game has started, but no
 [h3]Recommended Companion Mods[/h3]
 I've made a few enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 [list]
-[*][url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Primitive Conquest Enhancements[/url] ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Pre-FTL Conquest & Infiltration: Enhanced[/url] ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered
+	[list]
+	[*]Meshes with the primitive-conquering style of Necrophages
+	[*]Because the Zdremites are lithoids, it is useful for avoiding farming districts being generated on their homeworld
+	[*]Helps Necrophage AIs more fairly set up their starter primitives, should the ESA or any other necrophage be randomly selected to spawn
+	[/list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 [/list]
 [h2]Known Issues[/h2]

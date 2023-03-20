@@ -109,7 +109,7 @@ The bulk of the scripting is to support game setup and the new Colossus weapon. 
 
 ## Compatibility
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
@@ -125,9 +125,11 @@ This mod can be safely added to your savegame after the game has started, but no
 
 I've made a few enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 
-[Primitive Conquest Enhancements](https://steamcommunity.com/workshop/filedetails/?id=2488154830) ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered. It also helps with the primitive-conquering style of Necrophages, and because the Zdremites are lithoids this mod will be useful for avoiding farming districts being generated on their homeworld. It also helps the AI more fairly set up its starter primitives, should the ESA or any other necrophage be randomly selected to spawn.
-
-[Special Leadership Privileges for Battle Thralls and Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
+* [Pre-FTL Conquest & Infiltration: Enhanced](https://steamcommunity.com/workshop/filedetails/?id=2488154830) ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered
+    * Meshes with the primitive-conquering style of Necrophages
+    * Because the Zdremites are lithoids, it is useful for avoiding farming districts being generated on their homeworld
+    * Helps Necrophage AIs more fairly set up their starter primitives, should the ESA or any other necrophage be randomly selected to spawn
+* [Special Leadership Privileges for Battle Thralls and Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose; he role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles
 
 ## Known Issues
 
@@ -184,6 +186,10 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Necrophagic Spore Dispersal technology is easier to draw if you have the Javorian Pox Sample
 * 7.1.0 Remove no-longer-necessary custom on_actions `on_primitive_planet_transferring` and `on_primitive_planet_transferred`
 * 8.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
+* 9.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Remove obsolete code that previously supported primitive/pre-FTL empires becoming a fully-fledged empire
+    * Adjust remaining code to use new systems for primitive/pre-FTL empires
+    * Improve built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
 
 ## Source Code
 
