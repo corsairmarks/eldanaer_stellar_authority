@@ -302,6 +302,7 @@ event = {
 						OR = {
 							is_wet = yes
 							is_planet_class = pc_gaia
+							is_pd_gaia = yes
 						}
 					}
 					add_modifier = {
@@ -786,6 +787,7 @@ planet_event = {
 							is_planet_class = pc_gaia
 							is_planet_class = pc_relic
 						}
+						is_pd_gaia = no
 						owner = {
 							has_technology = tech_glandular_acclimation
 							NOT = { ideal_planet_class = root }

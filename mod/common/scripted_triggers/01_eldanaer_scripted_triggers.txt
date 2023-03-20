@@ -36,7 +36,6 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 					is_planet_class = pc_hive
 					is_pd_hive_world = yes
 					is_pd_hive_arcology = yes
-					is_pd_arcology = yes
 				}
 			}
 			habitable_structure = yes
