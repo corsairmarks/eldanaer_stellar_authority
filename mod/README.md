@@ -187,8 +187,10 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
 * 7.1.0 Remove no-longer-necessary custom on_actions `on_primitive_planet_transferring` and `on_primitive_planet_transferred`
 * 8.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
 * 9.0.0 Update for Stellaris version 3.7 "Canis Minor"
-    * Remove obsolete code that previously supported primitive/pre-FTL empires becoming a fully-fledged empire
-    * Adjust remaining code to use new systems for primitive/pre-FTL empires
+    * Update Zdremite prescripted pre-FTL empire based on new pre-FTL code
+    * Update Necrophagic Spore Diffuser planet killer with changes for Origin: Fear of the Dark
+    * Update Cautious Autocrats personality
+    * Prefer assembling High-G species on planets with High Gravity
     * Improve built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
 
 ## Source Code
