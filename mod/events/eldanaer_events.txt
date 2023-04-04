@@ -59,67 +59,124 @@ country_event = {
 							trait = "trait_slow_learners"
 							trait = "trait_sedentary"
 						}
-					}
-					last_created_species = {
-						# force the use of lith8 - if another random species was already using it, the zdremites
-						# will end up with "none" which displays as blank or the last selected species.
-						change_species_portrait = "lith8"
-						set_species_flag = zdremite_species@root
-						# flag from "Special Leadership Privileges for Battle Thralls and Bio-Trophies" to allow the Zdremites to be leaders
-						set_species_flag = allow_military_leaders_honored_protectors@root
-					}
-					create_country = {
-						name = "PRESCRIPTED_zdremite"
-						authority = auth_oligarchic
-						civics = {
-							civic = civic_landed_nobility
-							civic = civic_flat_world_theory
-						}
-						species = last_created_species
-						ethos = {
-							ethic = "ethic_authoritarian"
-							ethic = "ethic_militarist"
-							ethic = "ethic_materialist"
-						}
-						flag = {
-							icon = {
-								category = "pre_ftl"
-								file = "preftl_steam_age.dds"
-							}
-							background = {
-								category = "backgrounds"
-								file = "new_dawn.dds"
-							}
-							colors = {
-								"orange"
-								"red"
-								"null"
-								"null"
-							}
-						}
-						origin = "origin_high_gravity_evolution"
-						type = primitive
 						effect = {
-							set_graphical_culture = preindustrial_01
-							set_country_flag = steam_age
-							set_pre_ftl_age = steam_age
-							set_adjective = "PRESCRIPTED_adjective_zdremite"
-							# Don't allow the Zdremites to advance quickly - this flag is used by the
-							# primitive age increment events in events\primitive_events.txt to gatekeep
-							# advancement (although most of them use 2160 days/6 years).
-							set_timed_country_flag = {
-								flag = recently_advanced
-								years = 25
+							# force the use of lith8 - if another random species was already using it, the zdremites
+							# will end up with "none" which displays as blank or the last selected species.
+							change_species_portrait = "lith8"
+							set_species_flag = zdremite_species@root
+							# flag from "Special Leadership Privileges for Battle Thralls and Bio-Trophies" to allow the Zdremites to be leaders
+							set_species_flag = allow_military_leaders_honored_protectors@root
+							save_event_target_as = zdremite_species
+						}
+					}
+					if = {
+						limit = { root = { is_hive_empire = no } }
+						create_country = {
+							name = "PRESCRIPTED_zdremite"
+							authority = auth_oligarchic
+							civics = {
+								civic = civic_landed_nobility
+								civic = civic_flat_world_theory
+							}
+							species = event_target:zdremite_species
+							ethos = {
+								ethic = "ethic_authoritarian"
+								ethic = "ethic_militarist"
+								ethic = "ethic_materialist"
+							}
+							flag = {
+								icon = {
+									category = "pre_ftl"
+									file = "preftl_steam_age.dds"
+								}
+								background = {
+									category = "backgrounds"
+									file = "new_dawn.dds"
+								}
+								colors = {
+									"orange"
+									"red"
+									"null"
+									"null"
+								}
+							}
+							origin = "origin_high_gravity_evolution"
+							type = primitive
+							effect = {
+								set_graphical_culture = preindustrial_01
+								set_country_flag = steam_age
+								set_pre_ftl_age = steam_age
+								# Don't allow the Zdremites to advance quickly - this flag is used by the
+								# primitive age increment events in events\primitive_events.txt to gatekeep
+								# advancement (although most of them use 2160 days/6 years).
+								set_timed_country_flag = {
+									flag = recently_advanced
+									years = 25
+								}
+								country_event = {
+									id = origin_high_gravity_evolution.2
+								}
 							}
 						}
+						setup_pre_ftl_planet = yes
+						pre_ftl_clean_up_effect = yes
 					}
-					last_created_country = {
-						country_event = {
-							id = origin_high_gravity_evolution.2
+					else = {
+						set_planet_flag = pre_ftl_hive_mind
+						event_target:zdremite_species = {
+							change_species_characteristics = {
+								add_trait = trait_hive_mind
+								add_traits_at_start_of_list = yes
+							}
 						}
+						create_country = {
+							name = "PRESCRIPTED_zdremite"
+							adjective = "PRESCRIPTED_adjective_zdremite"
+							authority = auth_hive_mind
+							civics = {
+								civic = civic_hive_burgeoning_nodes
+								civic = civic_hive_flat_world_theory
+							}
+							species = event_target:zdremite_species
+							ethos = {
+								ethic = "ethic_gestalt_consciousness"
+							}
+							flag = {
+								icon = {
+									category = "pre_ftl"
+									file = "preftl_steam_age.dds"
+								}
+								background = {
+									category = "backgrounds"
+									file = "new_dawn.dds"
+								}
+								colors = {
+									"orange"
+									"red"
+									"null"
+									"null"
+								}
+							}
+							origin = "origin_high_gravity_evolution"
+							type = primitive
+							effect = {
+								set_graphical_culture = preindustrial_01
+								set_country_flag = steam_age
+								set_pre_ftl_age = steam_age
+								# Don't allow the Zdremites to advance quickly - this flag is used by the
+								# primitive age increment events in events\primitive_events.txt to gatekeep
+								# advancement (although most of them use 2160 days/6 years).
+								set_timed_country_flag = {
+									flag = recently_advanced
+									years = 25
+								}
+								country_event = {
+									id = origin_high_gravity_evolution.2
+								}
+							}
+						}
+						setup_pre_ftl_hive_planet = yes
 					}
-					setup_pre_ftl_planet = yes
-					pre_ftl_clean_up_effect = yes
 					# Add hibernating Zdremites blockers, but kill off an equal number of the primitive pops to compensate.
 					while = {
 						count = 4
