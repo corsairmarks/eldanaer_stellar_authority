@@ -192,10 +192,13 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Update Cautious Autocrats personality
     * Prefer assembling High-G species on planets with High Gravity
     * Improve built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
+* 9.1.0 Improve support for hive-minded empires
+    * Support spawning hive-minded Zdremites for hive-minded Eldanær
+    * Do not add happiness for High-G Pops which are hive-minded
 
 ## Source Code
 
-Hosted on [Github](https://github.com/corsairmarks/eldanaer_stellar_authority)
+Hosted on [GitHub](https://github.com/corsairmarks/eldanaer_stellar_authority)
 
 ### Development Notes
 

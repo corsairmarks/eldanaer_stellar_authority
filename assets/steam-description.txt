@@ -54,6 +54,6 @@ Because [b]gov_bureaucratic_autocracy[/b] is not a built-in type of government, 
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2496360535]Change Notes[/url]
 
 [h2]Source Code[/h2]
-Hosted on [url=https://github.com/corsairmarks/eldanaer_stellar_authority]Github[/url]
+Hosted on [url=https://github.com/corsairmarks/eldanaer_stellar_authority]GitHub[/url]
 
 [url=https://discord.gg/2qjkAF8DY7][img]https://i.imgur.com/4Und3QN.png[/img][/url]
