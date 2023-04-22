@@ -1,3 +1,4 @@
+# this = any
 has_eldanaer_prerequisites = {
 	optimize_memory
 	has_necroids = yes # eldanaer: origin, city graphical culture
@@ -19,6 +20,7 @@ is_eligible_pk_spore_dispersal = {
 	is_species_class = "FUN"
 }
 
+# this = planet
 can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	optimize_memory
 	custom_tooltip = {
@@ -120,4 +122,10 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 			}
 		}
 	}
+}
+
+# this = country
+has_government_bureaucratic_autocracy = {
+	optimize_memory
+	has_government = gov_bureaucratic_autocracy
 }

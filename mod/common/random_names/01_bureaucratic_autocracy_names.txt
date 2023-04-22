@@ -51,7 +51,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = gov_bureaucratic_autocracy
+			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -69,7 +69,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 1
-			has_government = "gov_bureaucratic_autocracy"
+			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -87,7 +87,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 5
-			has_government = gov_bureaucratic_autocracy
+			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -105,7 +105,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = gov_bureaucratic_autocracy
+			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
@@ -123,7 +123,7 @@ empire_name_format = {
 		factor = 0
 		modifier = {
 			add = 2
-			has_government = gov_bureaucratic_autocracy
+			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
 			NOT = { is_country_type = fallen_empire }
