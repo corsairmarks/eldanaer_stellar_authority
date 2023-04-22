@@ -73,6 +73,7 @@ country_event = {
 						limit = { root = { is_hive_empire = no } }
 						create_country = {
 							name = "PRESCRIPTED_zdremite"
+							adjective = "PRESCRIPTED_adjective_zdremite"
 							authority = auth_oligarchic
 							civics = {
 								civic = civic_landed_nobility
