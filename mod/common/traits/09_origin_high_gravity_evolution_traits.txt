@@ -1,5 +1,5 @@
 trait_high_gravity_evolution = {
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_planet.dds"
+	icon = gfx/interface/icons/traits/trait_high_g_evolution.dds
 	initial = no
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
