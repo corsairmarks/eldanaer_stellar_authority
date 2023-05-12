@@ -64,7 +64,7 @@ country_event = {
 							# will end up with "none" which displays as blank or the last selected species.
 							change_species_portrait = "lith8"
 							set_species_flag = zdremite_species@root
-							# flag from "Special Leadership Privileges for Battle Thralls and Bio-Trophies" to allow the Zdremites to be leaders
+							# flag from "Special Leadership Privileges for Battle Thralls & Bio-Trophies" to allow the Zdremites to be leaders
 							set_species_flag = allow_military_leaders_honored_protectors@root
 							save_event_target_as = zdremite_species
 						}
@@ -314,9 +314,9 @@ country_event = {
 			option = border_policy_open
 			cooldown = no
 		}
-		capital_scope.sector = {
-			set_name = "START_esa_sector_name"
-			# flag the initial governor for custom level-ups, set to bureaucrat
+		capital_scope = {
+			sector = { set_name = "START_esa_sector_name" }
+			# set the initial governor to bureaucrat
 			leader = {
 				set_name = "START_esa_initial_governor_name"
 				set_leader_flag = eldanaer_stellar_authority_initial_governor
@@ -324,19 +324,18 @@ country_event = {
 					limit = { root = { has_valid_civic = civic_byzantine_bureaucracy } }
 					if = {
 						limit = { NOT = { has_trait = leader_trait_bureaucrat } }
-						remove_generic_randomized_positive_traits = yes
-						remove_governor_randomized_positive_traits = yes
-						add_trait = leader_trait_bureaucrat
+						remove_all_traits = yes
+						add_trait_no_notify = leader_trait_bureaucrat
 					}
-					set_leader_flag = has_gained_level_trait # pretend like this leader gained a level-up trait - it's actually scripted in eldanaer.30
-					set_leader_flag = has_gained_governor_level_trait # pretend like this leader gained a governor level-up trait - it's actually scripted in eldanaer.30
+					change_background_job = bureaucrat
 				}
 			}
 		}
 		ruler = {
-			set_leader_flag = eldanaer_stellar_authority_initial_ruler
-			set_leader_flag = has_gained_level_trait # pretend like this leader gained a level-up trait - it's actually scripted in eldanaer.31
-			set_leader_flag = has_gained_ruler_level_trait # pretend like this leader gained a ruler level-up trait - it's actually scripted in eldanaer.31
+			# add second flavor trait to starting ruler
+			add_trait_no_notify = leader_trait_politician
+			change_background_ethic = ethic_authoritarian
+			change_background_job = noble
 		}
 	}
 }
@@ -568,80 +567,6 @@ planet_event = {
 	immediate = {
 		log = "planet transfer: [This.GetName] now owned by the [This.Owner.GetName]"
 		from = { country_event = { id = eldanaer.20 } }
-	}
-}
-
-# Triggered by on_leader_level_up
-# root = Country
-# from = Leader
-country_event = {
-	id = eldanaer.30
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_country_flag = is_eldanaer_stellar_authority
-		is_regular_empire = yes
-		from = {
-			has_leader_flag = eldanaer_stellar_authority_initial_governor
-			num_traits < 3
-		}
-	}
-	immediate = {
-		from = {
-			if = {
-				limit = {
-					root = { allows_slavery = yes }
-					has_level > 1
-					NOT = { has_trait = leader_trait_iron_fist }
-				}
-				add_trait = leader_trait_iron_fist
-				set_timed_leader_flag = { flag = gained_leader_trait_iron_fist days = 7 }
-				set_timed_leader_flag = { flag = has_gained_trait days = 7 }
-				owner = { country_event = { id = leader.23 } } # notification to player
-			}
-			else_if = {
-				limit = {
-					root = { has_valid_civic = civic_police_state }
-					has_level > 4
-					NOT = { has_trait = leader_trait_righteous }
-				}
-				add_trait = leader_trait_righteous
-				set_timed_leader_flag = { flag = gained_leader_trait_righteous days = 7 }
-				set_timed_leader_flag = { flag = has_gained_trait days = 7 }
-				owner = { country_event = { id = leader.23 } } # notification to player
-			}
-		}
-	}
-}
-
-# Triggered by on_leader_level_up
-# root = Country
-# from = Leader
-country_event = {
-	id = eldanaer.31
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		has_country_flag = is_eldanaer_stellar_authority
-		is_regular_empire = yes
-		from = {
-			has_leader_flag = eldanaer_stellar_authority_initial_ruler
-			num_traits < 3
-		}
-	}
-	immediate = {
-		from = {
-			if = {
-				limit = {
-					has_level > 2
-					NOT = { has_trait = trait_ruler_deep_connections }
-				}
-				add_trait = trait_ruler_deep_connections
-				set_timed_leader_flag = { flag = gained_trait_ruler_deep_connections days = 7 }
-				set_timed_leader_flag = { flag = has_gained_trait days = 7 }
-				owner = { country_event = { id = leader.25 } } # notification to player
-			}
-		}
 	}
 }
 

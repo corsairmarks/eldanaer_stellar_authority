@@ -14,16 +14,6 @@ on_game_start_country = {
 	}
 }
 
-# A leader leveled up.
-# this = Country
-# from = Leader
-on_leader_level_up = {
-	events = {
-		eldanaer.30
-		eldanaer.31
-	}
-}
-
 # this = planet that has been fired upon
 # from = fleet that fired
 on_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
