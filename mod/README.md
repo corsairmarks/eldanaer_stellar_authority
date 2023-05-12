@@ -198,7 +198,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
 * 9.2.0 Add a government trigger for other mods (`has_government_bureaucratic_autocracy`), minor localisation fix
 * 10.0.0 Update for Stellaris version 3.8 "Gemini"
     * Adjust custom scripting for new leader system
-    * Adjust Zdremite extra defensive armies - there is currently a bug with spawning armies (even defensive ones) resulting in them spawning in orbit of the planet
+    * Adjust Zdremite extra defensive armies - there is currently a bug with creating armies (even defensive ones) resulting in them spawning in orbit of the planet
     * Integrate underlying changes for technologies
 
 ## Source Code
