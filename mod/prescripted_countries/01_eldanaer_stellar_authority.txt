@@ -1,90 +1,89 @@
-eldanaer={
-	name="EMPIRE_DESIGN_eldanaer"
-	ship_prefix="PRESCRIPTED_esa_ship_prefix"
-	spawn_enabled=yes
-	playable=has_eldanaer_prerequisites
-	species={
-		class="FUN"
-		portrait="fun7"
-		name="PRESCRIPTED_species_name_eldanaer"
-		plural="PRESCRIPTED_species_plural_eldanaer"
-		adjective="PRESCRIPTED_species_adjective_eldanaer"
+eldanaer = {
+	name = EMPIRE_DESIGN_eldanaer
+	ship_prefix = PRESCRIPTED_esa_ship_prefix
+	spawn_enabled = yes
+	playable = has_eldanaer_prerequisites
+	species = {
+		class = FUN
+		portrait = fun7
+		name = PRESCRIPTED_species_name_eldanaer
+		plural = PRESCRIPTED_species_plural_eldanaer
+		adjective = PRESCRIPTED_species_adjective_eldanaer
 		# species_bio does not currently accept localisation keys or literal newlines
-		# species_bio="PRESCRIPTED_species_bio_eldanaer"
-		name_list="FUN2b"
-		gender=indeterminable
-		trait="trait_necrophage"
-		trait="trait_traditional"
-		trait="trait_charismatic"
-		trait="trait_enduring"
-		trait="trait_slow_breeders"
-		trait="trait_decadent"
+		# species_bio = PRESCRIPTED_species_bio_eldanaer
+		name_list = FUN2b
+		gender = indeterminable
+		trait = trait_necrophage
+		trait = trait_traditional
+		trait = trait_charismatic
+		trait = trait_enduring
+		trait = trait_slow_breeders
+		trait = trait_decadent
 		# intentionally have Decadent even though it results in an unspent trait point
 	}
-	secondary_species={
-		class="PLANT"
-		portrait="pla7"
-		name="PRESCRIPTED_species_name_kfoor"
-		plural="PRESCRIPTED_species_plural_kfoor"
-		adjective="PRESCRIPTED_species_adjective_kfoor"
+	secondary_species = {
+		class = PLANT
+		portrait = pla7
+		name = PRESCRIPTED_species_name_kfoor
+		plural = PRESCRIPTED_species_plural_kfoor
+		adjective = PRESCRIPTED_species_adjective_kfoor
 		# species_bio does not currently accept localisation keys or literal newlines
-		# species_bio="PRESCRIPTED_species_bio_kfoor"
-		name_list="PLANT4"
-		gender=indeterminable
-		trait="trait_ingenious"
-		trait="trait_plantoid_budding"
-		trait="trait_strong"
-		trait="trait_unruly"
-		trait="trait_fleeting"
+		# species_bio = PRESCRIPTED_species_bio_kfoor
+		name_list = PLANT4
+		gender = indeterminable
+		trait = trait_ingenious
+		trait = trait_plantoid_budding
+		trait = trait_strong
+		trait = trait_unruly
+		trait = trait_fleeting
 	}
-	adjective="PRESCRIPTED_adjective_eldanaer"
-	authority="auth_imperial"
-	government="gov_bureaucratic_autocracy"
-	planet_name="PRESCRIPTED_esa_planet_name"
-	planet_class="pc_tropical"
-	system_name="PRESCRIPTED_esa_system_name"
-	initializer="eldanaer_starting_system_initializer"
-	graphical_culture="fungoid_01"
-	city_graphical_culture="necroid_01"
-	empire_flag={
-		icon={
-			category="blocky"
-			file="flag_blocky_2.dds"
+	adjective = PRESCRIPTED_adjective_eldanaer
+	authority = auth_imperial
+	government = gov_bureaucratic_autocracy
+	planet_name = PRESCRIPTED_esa_planet_name
+	planet_class = pc_tropical
+	system_name = PRESCRIPTED_esa_system_name
+	initializer = eldanaer_starting_system_initializer
+	graphical_culture = fungoid_01
+	city_graphical_culture = necroid_01
+	empire_flag = {
+		icon = {
+			category = blocky
+			file = flag_blocky_2.dds
 		}
-		background={
-			category="backgrounds"
-			file="double_hemispheres.dds"
+		background = {
+			category = backgrounds
+			file = double_hemispheres.dds
 		}
-		colors={
+		colors = {
 			"dark_green"
 			"black"
 			"null"
 			"null"
 		}
 	}
-	ruler={
-		gender=indeterminable
-		name="PRESCRIPTED_ruler_name_eldanaer"
-		portrait="fun7"
-		texture=3
-		attachment=0
-		clothes=0
-		leader_class="ruler"
-		trait="trait_ruler_architectural_sense"
-		trait="trait_ruler_explorer"
+	ruler = {
+		gender = indeterminable
+		name = PRESCRIPTED_ruler_name_eldanaer
+		portrait = fun7
+		texture = 3
+		attachment = 0
+		clothes = 0
+		leader_class = governor
+		trait = leader_trait_principled
 	}
-	spawn_as_fallen=no
-	ignore_portrait_duplication=yes
-	room="personality_peaceful_traders_room"
-	ethic="ethic_fanatic_authoritarian"
-	ethic="ethic_xenophobe"
-	civics={
-		"civic_byzantine_bureaucracy"
-		"civic_police_state"
+	spawn_as_fallen = no
+	ignore_portrait_duplication = yes
+	room = personality_peaceful_traders_room
+	ethic = ethic_fanatic_authoritarian
+	ethic = ethic_xenophobe
+	civics = {
+		civic_byzantine_bureaucracy
+		civic_police_state
 	}
-	origin="origin_necrophage"
-	flags={
-		"is_eldanaer_stellar_authority"
-		"custom_start_screen"
+	origin = origin_necrophage
+	flags = {
+		is_eldanaer_stellar_authority
+		custom_start_screen
 	}
 }
