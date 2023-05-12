@@ -109,7 +109,7 @@ The bulk of the scripting is to support game setup and the new Colossus weapon. 
 
 ## Compatibility
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
@@ -129,7 +129,7 @@ I've made a few enhancement mods that were inspired by things I found in the cod
     * Meshes with the primitive-conquering style of Necrophages
     * Because the Zdremites are lithoids, it is useful for avoiding farming districts being generated on their homeworld
     * Helps Necrophage AIs more fairly set up their starter primitives, should the ESA or any other necrophage be randomly selected to spawn
-* [Special Leadership Privileges for Battle Thralls and Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose; he role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles
+* [Special Leadership Privileges for Battle Thralls & Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose; he role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles
 
 ## Known Issues
 
@@ -155,7 +155,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Update README
 * 2.2.1 Add "Technologies" tag because of the Colossus weapon, explicit mod dependency in description
 * 2.3.0 Add install flag for single-player game load
-* 2.3.1 Support new flag from Full Military Service for Battle Thralls (now known as Special Leadership Privileges for Battle Thralls and Bio-Trophies)
+* 2.3.1 Support new flag from Full Military Service for Battle Thralls (now known as Special Leadership Privileges for Battle Thralls & Bio-Trophies)
 * 2.3.2 Support new flag from Leader Traits: Enhanced Randomisation, fix High-G origin so starting Pops have the positive trait
 * 3.0.0 Mark as compatible with Stellaris version 3.1 "Lem"
     * Origin: High-G trait uses new triggered bonuses (similar to the changes to Void Dweller)
@@ -196,6 +196,10 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Support spawning hive-minded Zdremites for hive-minded Eldanær
     * Do not add happiness for High-G Pops which are hive-minded
 * 9.2.0 Add a government trigger for other mods (`has_government_bureaucratic_autocracy`), minor localisation fix
+* 10.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Adjust custom scripting for new leader system
+    * Adjust Zdremite extra defensive armies - there is currently a bug with spawning armies (even defensive ones) resulting in them spawning in orbit of the planet
+    * Integrate underlying changes for technologies
 
 ## Source Code
 

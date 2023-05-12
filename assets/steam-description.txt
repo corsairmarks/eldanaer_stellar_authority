@@ -24,7 +24,7 @@ There is a new diplomatic personality, the Cautious Autocrats, that I re-weighte
 The bulk of the scripting is to support game setup and the new Colossus weapon. Have fun necrophaging entire worlds!
 
 [h2]Compatibility[/h2]
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 All of the mod's changes are fully custom-scripted, so it should play well with most other mods.
 
@@ -43,7 +43,7 @@ I've made a few enhancement mods that were inspired by things I found in the cod
 	[*]Because the Zdremites are lithoids, it is useful for avoiding farming districts being generated on their homeworld
 	[*]Helps Necrophage AIs more fairly set up their starter primitives, should the ESA or any other necrophage be randomly selected to spawn
 	[/list]
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls and Bio-Trophies[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls & Bio-Trophies[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 [/list]
 [h2]Known Issues[/h2]
 Because [b]gov_bureaucratic_autocracy[/b] is not a built-in type of government, it doesn't have a matching special message for when space pirates first spawn. The game will display a default fallback, but log an error like this:
