@@ -1,0 +1,4 @@
+pre_ftl_militarization = {
+	icon = gfx/interface/icons/planet_modifiers/pm_martial_law.dds
+	defense_armies_add = 8
+}

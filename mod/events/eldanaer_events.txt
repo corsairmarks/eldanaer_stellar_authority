@@ -240,13 +240,18 @@ country_event = {
 					}
 					set_name = "PRESCRIPTED_planet_name_zdremite"
 					change_colony_foundation_date = -461 # this number matches necroids.4
-					while = {
-						count = 8 # double the normal amount - Zdremites are Steam Age (more Pops) and are militarist
-						create_army = {
-							owner = last_created_country
-							type = primitive_additional_army
-							species = last_created_country
-						}
+					# all armies are sent to orbit (even defensive ones) in 3.8 "Gemini" - I am using a static modifier as a workaround
+					# while = {
+					# 	count = 8 # double the normal amount - Zdremites are Steam Age (more Pops) and are militarist
+					# 	create_army = {
+					# 		owner = last_created_country
+					# 		type = primitive_additional_army
+					# 		species = last_created_country
+					# 	}
+					# }
+					add_modifier = {
+						modifier = pre_ftl_militarization
+						clear_on_owner_change = yes
 					}
 				}
 			}

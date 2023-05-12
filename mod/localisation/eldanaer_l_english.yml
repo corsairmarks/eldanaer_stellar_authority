@@ -5,6 +5,8 @@
  START_esa_initial_governor_name: "$FUN2_CHR_Wluguarq$ $FUN2b_CHR_Eldoon$"
  d_hibernating_zdremites: "£blocker£ Zdremite Monoliths"
  d_hibernating_zdremites_desc: "Incredibly rich outcroppings of minerals that seem to be comprised of petrified Zdremites and overgrown with vegetation."
+ pre_ftl_militarization: "Pre-FTL Militarization"
+ pre_ftl_militarization_desc: "The native civilization on this planet has a higher-than-normal military buildup for its civilization pre-FTL age."
  gov_bureaucratic_autocracy: "Bureaucratic Autocracy"
  gov_bureaucratic_autocracy_desc: "This government is a hierarchical and nigh-incomprehensible system of offices and sub-administrations, where even the absolute ruler is defined and bound by complex, arcane precepts and where succession is rigidly predetermined by law."
  RT_BA_AUTARCH: "Autarch"
