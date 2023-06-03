@@ -64,7 +64,11 @@ eldanaer = {
 	}
 	ruler = {
 		gender = indeterminable
-		name = PRESCRIPTED_ruler_name_eldanaer
+		name = {
+			first_name = FUN2b_CHR_Hmaalurd
+			second_name = FUN2b_CHR_Sooq
+		}
+		# custom_biography = PRESCRIPTED_ruler_biography_eldanaer
 		portrait = fun7
 		texture = 3
 		attachment = 0
