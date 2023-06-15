@@ -54,8 +54,7 @@ empire_name_format = {
 			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
-			NOT = { is_country_type = fallen_empire }
-			NOT = { is_country_type = awakened_fallen_empire }
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<bureaucratic_autocracy> [This.Capital.System.GetName]}}"
@@ -72,8 +71,7 @@ empire_name_format = {
 			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
-			NOT = { is_country_type = fallen_empire }
-			NOT = { is_country_type = awakened_fallen_empire }
+			is_fallen_empire = no
 		}
 	}
 	format = "{AofB{<bureaucratic_autocracy> [This.Capital.GetName]}}"
@@ -90,8 +88,7 @@ empire_name_format = {
 			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
-			NOT = { is_country_type = fallen_empire }
-			NOT = { is_country_type = awakened_fallen_empire }
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<bureaucratic_autocracy>}}"
@@ -108,8 +105,7 @@ empire_name_format = {
 			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
-			NOT = { is_country_type = fallen_empire }
-			NOT = { is_country_type = awakened_fallen_empire }
+			is_fallen_empire = no
 		}
 	}
 	format = "{<bureaucratic_autocracy_desc> {[This.GetSpeciesAdj] {<bureaucratic_autocracy>}}}"
@@ -126,8 +122,7 @@ empire_name_format = {
 			has_government_bureaucratic_autocracy = yes
 			is_pirate = no
 			is_primitive = no
-			NOT = { is_country_type = fallen_empire }
-			NOT = { is_country_type = awakened_fallen_empire }
+			is_fallen_empire = no
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<bureaucratic_autocracy_mid_desc> {<bureaucratic_autocracy>}}}"

@@ -604,11 +604,7 @@ planet_event = {
 				exists = owner
 				owner = {
 					NOT = { is_country = from.owner }
-					OR = {
-						is_country_type = default
-						is_country_type = fallen_empire
-						is_country_type = awakened_fallen_empire
-					}
+					is_default_or_fallen = yes
 				}
 			}
 			# Generate threat
@@ -671,7 +667,7 @@ planet_event = {
 		else_if = {
 			limit = {
 				exists = owner
-				owner = { is_country_type = primitive }
+				owner = { is_primitive = yes }
 			}
 			# modifier for those upset by genocide of primitives
 			every_country = {
