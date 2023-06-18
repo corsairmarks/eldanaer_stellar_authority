@@ -73,7 +73,7 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 	}
 	if = {
 		limit = { exists = owner }
-		# primitive planet must be within borders
+		# pre-FTL planet must be within borders
 		if = {
 			limit = { owner = { is_primitive = yes } }
 			custom_tooltip = {
@@ -81,7 +81,7 @@ can_destroy_planet_with_PLANET_KILLER_SPORE_DISPERSAL = {
 				exists = space_owner
 				space_owner = { is_country = from.owner }
 			}
-			# must have an appropriate primitive interference policy
+			# must have an appropriate pre-FTL interference policy
 			custom_tooltip = {
 				fail_text = primitives_not_full_interference
 				from.owner = {

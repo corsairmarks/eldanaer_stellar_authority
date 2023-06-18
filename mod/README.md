@@ -10,7 +10,7 @@ The weapon effects are slightly different: all biological Pops are converted to 
 
 The Eldanær Stellar Authority is a fanatic authoritarian, xenophobic empire ruled by a rigid and complex bureaucratic hierarchy. It has a custom imperial authority, the Bureaucratic Autocracy, which is the same as a regular imperial authority but the rulers do not use dynastic titles. The Eldanær are fungoid necrophages with a plantoid prepatent species, the K'foori. The Eldanær have a pre-scripted home system (Ræl) with named planets and the Lush modifier on their homeworld (Dærun), orbiting a ringed gas giant with an extensive moon system - it is also available for custom empires to select.
 
-This mod also includes a custom primitive species of lithoids (the Zdremites) that will replace one of the randomly generated primitives for the Eldanær Stellar Authority's necrophage origin - as long as the number of guaranteed habitable worlds is 1 or higher. The Zdremites are guaranteed to spawn on a high gravity world and dangerous wildlife with lithoid monoliths that can always be cleared into extra Zdremite Pops, but have fewer Pops to start with. Their High-G Evolution origin is available for you to play (although it is underwhelming as a stand-alone origin).
+This mod also includes a custom pre-FTL species of lithoids (the Zdremites) that will replace one of the randomly generated pre-FTLs for the Eldanær Stellar Authority's necrophage origin - as long as the number of guaranteed habitable worlds is 1 or higher. The Zdremites are guaranteed to spawn on a high gravity world and dangerous wildlife with lithoid monoliths that can always be cleared into extra Zdremite Pops, but have fewer Pops to start with. Their High-G Evolution origin is available for you to play (although it is underwhelming as a stand-alone origin).
 
 Below are the full details about the portraits, traits, flags, and other game details used by this mod. They are provided here in case you would like the play as the Eldanær Stellar Authority but don't want any of the custom scripting.
 
@@ -36,7 +36,7 @@ Below are the full details about the portraits, traits, flags, and other game de
 
 **Gameplay Notes:** The Eldanær consider themselves to have culturally transcended their biological drive to necrophage others indiscriminately. Generally, avoid using the Necrophage Purge type unless you develop a particularly hated enemy. They prefer to establish trading partners and maintain commercial pacts, but keep their partners at arm's length. Although "protecting" the secret of their origin fuels their paranoid xenophobia, they don't implicitly hate other species. Open Borders are preferred.
 
-The Stellar Authority is a complex and impenetrable bureaucracy with many overlapping (and sometimes contradictory) layers, so Stratified Economy is preferred for any free Pops. Because the Eldanær consider themselves civilized, they tend to grant Residency to any species in their empire that originated in another space-faring empire and came peacefully (although they generally avoid migration treaties) as well as synthetics. On the other hand, they consider themselves superior to less technologically-advanced societies and view it as no contradiction to conquer and enslave primitive species or uplifted species. The slavery type should fit the species traits - living standards can vary, but giving the K'foori and Zdremites Social Welfare or Decent Conditions is preferred.
+The Stellar Authority is a complex and impenetrable bureaucracy with many overlapping (and sometimes contradictory) layers, so Stratified Economy is preferred for any free Pops. Because the Eldanær consider themselves civilized, they tend to grant Residency to any species in their empire that originated in another space-faring empire and came peacefully (although they generally avoid migration treaties) as well as synthetics. On the other hand, they consider themselves superior to less technologically-advanced societies and view it as no contradiction to conquer and enslave pre-FTL species or uplifted species. The slavery type should fit the species traits - living standards can vary, but giving the K'foori and Zdremites Social Welfare or Decent Conditions is preferred.
 
 When selecting a third civic, consider Corvée System to support their many-tiered, authoritarian society, or Merchant Guilds (and the Mercantile diplomatic stance) to lean into their trade ambitions.
 
@@ -125,10 +125,10 @@ This mod can be safely added to your savegame after the game has started, but no
 
 I've made a few enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 
-* [Pre-FTL Conquest & Infiltration: Enhanced](https://steamcommunity.com/workshop/filedetails/?id=2488154830) ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered
-    * Meshes with the primitive-conquering style of Necrophages
+* [Pre-FTL Conquest & Infiltration: Enhanced](https://steamcommunity.com/workshop/filedetails/?id=2488154830) ensures that pre-FTL planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered
+    * Meshes with the pre-FTL-conquering style of Necrophages
     * Because the Zdremites are lithoids, it is useful for avoiding farming districts being generated on their homeworld
-    * Helps Necrophage AIs more fairly set up their starter primitives, should the ESA or any other necrophage be randomly selected to spawn
+    * Helps Necrophage AIs more fairly set up their starter pre-FTLs, should the ESA or any other necrophage be randomly selected to spawn
 * [Special Leadership Privileges for Battle Thralls & Bio-Trophies](https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447) will allow you to use Battle Thralls as military leaders if you so choose; he role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles
 
 ## Known Issues
@@ -171,8 +171,8 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Prescripted empire species are both indeterminable gender
     * Zdremites are indeterminable gender
     * Planet killer denies usage unless you have full native interference
-    * Add interaction with [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684): primitive worlds necrophaged via the Necrophage Spore Diffuser will allow you to acquire its necrophaged leaders
-    * Add interaction with [Primitive Conquest Enhancements](https://steamcommunity.com/sharedfiles/filedetails/?id=2488154830): primitive worlds necrophaged via the Necrophage Spore Diffuser will generate infrastructure as if they were conquered
+    * Add interaction with [Retain Leaders from Integrated Subjects](https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684): pre-FTL worlds necrophaged via the Necrophage Spore Diffuser will allow you to acquire its necrophaged leaders
+    * Add interaction with [Pre-FTL Conquest & Infiltration: Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=2488154830): pre-FTL worlds necrophaged via the Necrophage Spore Diffuser will generate infrastructure as if they were conquered
 * 4.1.0 Pre-scripted species enhancements
     * K'foori swap Rapid Breeders for Budding
     * If playing the Eldanær Stellar Authority with both species as originally designed, they will be altered slightly:
@@ -184,7 +184,7 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
 * 7.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
     * Integrate underlying game changes (notably random empire names)
     * Necrophagic Spore Dispersal technology is easier to draw if you have the Javorian Pox Sample
-* 7.1.0 Remove no-longer-necessary custom on_actions `on_primitive_planet_transferring` and `on_primitive_planet_transferred`
+* 7.1.0 Remove no-longer-necessary custom on_actions `on_pre-FTL_planet_transferring` and `on_primitive_planet_transferred`
 * 8.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
 * 9.0.0 Update for Stellaris version 3.7 "Canis Minor"
     * Update Zdremite prescripted pre-FTL empire based on new pre-FTL code
@@ -200,8 +200,8 @@ Because `gov_bureaucratic_autocracy` is not a built-in type of government, it do
     * Adjust custom scripting for new leader system
     * Adjust Zdremite extra defensive armies - there is currently a bug with creating armies (even defensive ones) resulting in them spawning in orbit of the planet
     * Integrate underlying changes for technologies
-* 10.0.1 Update for Stellaris version 3.8.3 "Gemini" - ensure primitive armies spawn on the surface of their planets
-* 10.0.2 Make code more flexible, where possible, with fallen empire and primitive country types
+* 10.0.1 Update for Stellaris version 3.8.3 "Gemini" - ensure pre-FTL armies spawn on the surface of their planets
+* 10.0.2 Make code more flexible, where possible, with fallen empire and pre-FTL country types
 
 ## Source Code
 

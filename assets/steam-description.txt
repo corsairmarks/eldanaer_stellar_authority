@@ -8,7 +8,7 @@ The weapon effects are slightly different: all biological Pops are converted to 
 [h1]Details[/h1]
 The Eldanær Stellar Authority is a fanatic authoritarian, xenophobic empire ruled by a rigid and complex bureaucratic hierarchy. It has a custom imperial authority, the Bureaucratic Autocracy, which is the same as a regular imperial authority but the rulers do not use dynastic titles. The Eldanær are fungoid necrophages with a plantoid prepatent species, the K'foori. The Eldanær have a pre-scripted home system (Ræl) with named planets and the Lush modifier on their homeworld (Dærun), orbiting a ringed gas giant with an extensive moon system - it is also available for custom empires to select.
 
-This mod also includes a custom primitive species of lithoids (the Zdremites) that will replace one of the randomly generated primitives for the Eldanær Stellar Authority's necrophage origin - as long as the number of guaranteed habitable worlds is 1 or higher. The Zdremites are guaranteed to spawn on a high gravity world and dangerous wildlife with lithoid monoliths that can always be cleared into extra Zdremite Pops, but have fewer Pops to start with. Their High-G Evolution origin is available for you to play (although it is underwhelming as a stand-alone origin).
+This mod also includes a custom pre-FTL species of lithoids (the Zdremites) that will replace one of the randomly generated pre-FTLs for the Eldanær Stellar Authority's necrophage origin - as long as the number of guaranteed habitable worlds is 1 or higher. The Zdremites are guaranteed to spawn on a high gravity world and dangerous wildlife with lithoid monoliths that can always be cleared into extra Zdremite Pops, but have fewer Pops to start with. Their High-G Evolution origin is available for you to play (although it is underwhelming as a stand-alone origin).
 
 [h2]Special Bonus for the Pre-Scripted Empire[/h2]
 If you play the Eldanær Stellar Authority with both of its species (Eldanær and K'foori) exactly as they are pre-scripted, you will receive a small bonus.  At game start, the Eldanær will also receive Natural Sociologists to use their unspent trait point, while the K'foori will have Strong replaced with Serviles as well as replacing Unruly with both Slow Learners and Deviants to more accurately reflect their lore.
@@ -37,11 +37,11 @@ This mod can be safely added to your savegame after the game has started, but no
 [h3]Recommended Companion Mods[/h3]
 I've made a few enhancement mods that were inspired by things I found in the code as I scripted the Eldanær Stellar Authority. These affect game areas that the ESA uses and will improve your experience.
 [list]
-[*][url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Pre-FTL Conquest & Infiltration: Enhanced[/url] ensures that primitive planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2488154830]Pre-FTL Conquest & Infiltration: Enhanced[/url] ensures that pre-FTL planets you convert with the Necrophagic Spore Diffuser are properly given existing infrastructure as if conquered
 	[list]
-	[*]Meshes with the primitive-conquering style of Necrophages
+	[*]Meshes with the pre-FTL-conquering style of Necrophages
 	[*]Because the Zdremites are lithoids, it is useful for avoiding farming districts being generated on their homeworld
-	[*]Helps Necrophage AIs more fairly set up their starter primitives, should the ESA or any other necrophage be randomly selected to spawn
+	[*]Helps Necrophage AIs more fairly set up their starter pre-FTLs, should the ESA or any other necrophage be randomly selected to spawn
 	[/list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2496357447]Special Leadership Privileges for Battle Thralls & Bio-Trophies[/url] will allow you to use Battle Thralls as military leaders if you so choose.  The role-play for the Zdremites is that of "honored protectors" so this allows them to serve in (military) leadership roles.
 [/list]

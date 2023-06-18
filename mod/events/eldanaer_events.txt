@@ -1,7 +1,7 @@
 namespace = eldanaer
 
-# Based on necroids.4 from events/necroids_events_1.txt, the purpose of this event is to replace the random primitives
-# with custom primitives for the Eldanaer Stellar Authority.  Currently only the T1 colony is a custom species.
+# Based on necroids.4 from events/necroids_events_1.txt, the purpose of this event is to replace the random pre-FTLs
+# with custom pre-FTLs for the Eldanaer Stellar Authority.  Currently only the T1 colony is a custom species.
 country_event = {
 	id = eldanaer.1
 	is_triggered_only = yes
@@ -11,7 +11,7 @@ country_event = {
 		esa_is_necrophage_empire = yes
 	}
 	immediate = {
-		# Find the randomized necroids.4 primitives and replace with prescripted primitives.
+		# Find the randomized necroids.4 pre-FTLs and replace with prescripted pre-FTLs.
 		capital_scope.solar_system = {
 			closest_system = {
 				limit = { has_star_flag = neighbor_t1_first_colony }
@@ -107,13 +107,6 @@ country_event = {
 								set_graphical_culture = preindustrial_01
 								set_country_flag = steam_age
 								set_pre_ftl_age = steam_age
-								# Don't allow the Zdremites to advance quickly - this flag is used by the
-								# primitive age increment events in events\primitive_events.txt to gatekeep
-								# advancement (although most of them use 2160 days/6 years).
-								set_timed_country_flag = {
-									flag = recently_advanced
-									years = 25
-								}
 								country_event = {
 									id = origin_high_gravity_evolution.2
 								}
@@ -164,13 +157,6 @@ country_event = {
 								set_graphical_culture = preindustrial_01
 								set_country_flag = steam_age
 								set_pre_ftl_age = steam_age
-								# Don't allow the Zdremites to advance quickly - this flag is used by the
-								# primitive age increment events in events\primitive_events.txt to gatekeep
-								# advancement (although most of them use 2160 days/6 years).
-								set_timed_country_flag = {
-									flag = recently_advanced
-									years = 25
-								}
 								country_event = {
 									id = origin_high_gravity_evolution.2
 								}
@@ -178,7 +164,7 @@ country_event = {
 						}
 						setup_pre_ftl_hive_planet = yes
 					}
-					# Add hibernating Zdremites blockers, but kill off an equal number of the primitive pops to compensate.
+					# Add hibernating Zdremites blockers, but kill off an equal number of the pre-FTL pops to compensate.
 					while = {
 						count = 4
 						add_deposit = d_hibernating_zdremites
@@ -669,7 +655,7 @@ planet_event = {
 				exists = owner
 				owner = { is_primitive = yes }
 			}
-			# modifier for those upset by genocide of primitives
+			# modifier for those upset by genocide of pre-FTLs
 			every_country = {
 				limit = {
 					NOR = {
